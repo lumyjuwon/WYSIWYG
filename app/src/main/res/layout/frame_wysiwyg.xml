@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -22,13 +24,13 @@
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_cancel"
-            android:layout_width="60dp"
+            android:layout_width="65dp"
             android:layout_height="match_parent"
             android:text="can" />
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_cfrm"
-            android:layout_width="60dp"
+            android:layout_width="65dp"
             android:layout_height="match_parent"
             android:layout_gravity=""
             android:text="con" />
@@ -43,14 +45,41 @@
 
 
 
-    <androidx.appcompat.widget.Toolbar
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        y
-        z
-    </androidx.appcompat.widget.Toolbar>
 
-    <com.example.wysiwyg.EditorButton
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="8dp"
+            android:text="Button"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_italic"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="8dp"
+            android:text="Button"
+            app:layout_constraintStart_toEndOf="@+id/btn_bold"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_under"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="8dp"
+            android:text="Button"
+            app:layout_constraintStart_toEndOf="@+id/btn_italic"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.example.wysiwyg.EditorButton                                                          j
         android:id="@+id/btn_size"
         android:layout_width="1dp"
         android:layout_height="wrap_content"
@@ -71,26 +100,11 @@
         android:layout_weight="1"
         android:text="Button" />
 
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_bold"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Button" />
 
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_italic"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Button" />
 
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_under"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Button" />
+
+
+
 
     <com.example.wysiwyg.EditorButton
         android:id="@+id/btn_strike"
