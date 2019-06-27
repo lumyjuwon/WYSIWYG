@@ -3,5 +3,12 @@
     <dimen name="colorPanelSize">25dp</dimen>
     <dimen name="colorPanelViewSize">25dp</dimen>
     <dimen name="colorPanelPadding">12dp</dimen>
+    <dimen name="sideLinePadding">15dp</dimen>
+    <dimen name="buttonConfirmSize">65dp</dimen>
+    <dimen name="buttonSize">50dp</dimen>
+    <dimen name="detailTextSize">20sp</dimen>
+    <dimen name="detailTopDownPadding">10dp</dimen>
+    <dimen name="detailDividerMargin">2dp</dimen>
+
 
 </resources>

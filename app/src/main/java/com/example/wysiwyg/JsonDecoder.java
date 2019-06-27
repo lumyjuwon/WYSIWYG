@@ -30,14 +30,11 @@ public class JsonDecoder {
         try {
             // Convert Object type to String
             items = new JSONObject(mJson);
-            return items.get(key).toString();
+            return 1;
         }
         catch(Exception e){
             Log.d("JsonDecoder", e.toString());
             return null;
         }
     }
-
-    public Integer get
-
 }

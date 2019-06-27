@@ -164,7 +164,7 @@ public class WysiwygEditor extends LinearLayout implements WysiwygWebView.StateE
         mPopupWindow.showAsDropDown(view, -20, - 250);
 
         Button colorTextBlackButton =findViewById(R.id.color_text_black);
-        colorTextBlackButton.backgroundTint
+        // colorTextBlackButton.backgroundTint
     }
 
     public void closePopupWindow(){
