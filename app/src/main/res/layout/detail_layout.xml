@@ -219,7 +219,7 @@
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/color_panel_view"
+            android:src="@drawable/ic_color_panel"
             android:padding="@dimen/colorPanelPadding"/>
     </LinearLayout>
 
