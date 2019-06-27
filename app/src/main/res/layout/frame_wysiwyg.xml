@@ -36,10 +36,51 @@
 
     </LinearLayout>
 
+
+
+
+
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_weight="1"/>
+
+
+    <com.example.wysiwyg.EditorButton
+        android:id="@+id/btn_size"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:text="Button" />
+
+
+    <com.example.wysiwyg.EditorButton
+        android:id="@+id/btn_bgcolor"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:text="Button" />
+
+
+    <com.example.wysiwyg.EditorButton
+        android:id="@+id/btn_strike"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Button" />
+
+
+    <com.example.wysiwyg.EditorButton
+        android:id="@+id/btn_img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        />
+
+    <com.example.wysiwyg.EditorButton
+        android:id="@+id/btn_video"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        />
+
+
+
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -120,38 +161,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_size"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:text="Button" />
 
-
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_bgcolor"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:text="Button" />
-
-
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_strike"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="Button" />
-
-
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_img"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-         />
-
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_video"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-         />
 
 
 
