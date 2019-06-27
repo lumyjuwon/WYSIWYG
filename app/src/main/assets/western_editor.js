@@ -30,7 +30,7 @@ WE.selectionchange = function () {
 	location.href = 'we-state://' + encodeURI(JSON.stringify(items));
 };
 
-document.addEventListener('selectionchange', WE.selectionchange);   // 커서 이동 시 이벤트
+document.addEventListener('selectionchange', WE.selectionchange);	// 커서 이동 시 이벤트
 
 WE.exec = function (cmd, val) { // execCommand로 동작하는 기능 처리
 	val = (typeof(val) !== 'undefined') ? val : null;
@@ -41,7 +41,10 @@ WE.exec = function (cmd, val) { // execCommand로 동작하는 기능 처리
 
 WE.insertCss = function (property, value) {	// 블록 지정한 영역에 css 속성을 추가하는 함수
 	let select = getSelection();
-	let tag = select.getRangeAt(0).startContainer.parentNode;
+	let tag = select.getRangeAt(0).startContainer;
+	if (tag.parentNode.id != 'editor') {
+		tag = tag.parentNode;
+	}
 	if (select.toString() == tag.textContent) {	// 선택한 영역과 부모 태그가 동일하면 부모 태그에 속성 추가
 		if (tag.style[property] != value) {
 			tag.style[property] = value;
@@ -64,21 +67,30 @@ WE.insertCss = function (property, value) {	// 블록 지정한 영역에 css �
 
 WE.lineHeight = function (height) {
 	let tag = getSelection().getRangeAt(0).startContainer;
+	let tagOrigin = tag;
 	while (tag.tagName != 'DIV') {	// 해당 줄 선택
 		tag = tag.parentNode;
 	}
 	if (tag.id == 'editor') {	// 만약 텍스트가 div로 안 묶여있다면
+		let node = null;
 		let childs = tag.childNodes;
 		for (let i = 0; i < childs.length; i++) {
-			if (childs[i].nodeType == 3) {
-				let node = document.createElement('div');
-				WE.editor.insertBefore(node, childs[i]);
-				node.appendChild(childs[i + 1]);
+			if (childs[i].nodeType == 3 || (childs[i].nodeType == 1 && childs[i].tagName != 'DIV')) {
+				if (node == null) {
+					node = document.createElement('div');
+					WE.editor.insertBefore(node, childs[i]);
+					node.appendChild(childs[i + 1]);
+				} else {
+					node.appendChild(childs[i--]);
+				}
 			}
 		}
-		tag = tag.childNodes[0];
 	}
-	WE.selectElement(tag.childNodes[0]);
+	tag = tagOrigin;
+	while (tag.tagName != 'DIV') {	// 해당 줄 선택
+		tag = tag.parentNode;
+	}
+	WE.selectElement(tag);
 	WE.insertCss('line-height', height);
 };
 
@@ -99,7 +111,7 @@ WE.selectElement = function (el) {	// 특정 엘리먼트 선택
 	let sel = getSelection();
 	sel.removeAllRanges();
 	sel.addRange(range);
-}
+};
 
 //Input area settings, not tested 
 WE.setPlaceholder = function(placeholder) {
