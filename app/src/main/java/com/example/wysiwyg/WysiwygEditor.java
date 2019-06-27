@@ -79,16 +79,16 @@ public class WysiwygEditor extends LinearLayout{
                     case R.id.btn_bgcolor:
                         break;
                     case R.id.btn_bold:
-                        mWebView.evaluateJavascript("javascript:WE.exec('bold');", null);
+                        mWebView.evaluateJavascript("javascript:WE.exec(" + EvalCommand.BOLD.toString() + ");", null);
                         break;
                     case R.id.btn_italic:
-                        mWebView.evaluateJavascript("javascript:WE.exec('italic');", null);
+                        mWebView.evaluateJavascript("javascript:WE.exec(" + EvalCommand.ITALIC.toString() + ");", null);
                         break;
                     case R.id.btn_under:
-                        mWebView.evaluateJavascript("javascript:WE.exec('underline');", null);
+                        mWebView.evaluateJavascript("javascript:WE.exec(" + EvalCommand.UNDERLINE.toString() + ");", null);
                         break;
                     case R.id.btn_strike:
-                        mWebView.evaluateJavascript("javascript:WE.exec('strikeThrough');", null);
+                        mWebView.evaluateJavascript("javascript:WE.exec(" + EvalCommand.STRIKETHROUGH.toString() + ");", null);
                         break;
                     case R.id.btn_align:
                         break;
