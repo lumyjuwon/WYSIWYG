@@ -25,8 +25,7 @@
             android:id="@+id/color_text_white"
             android:layout_width="@dimen/colorPanelSize"
             android:layout_height="@dimen/colorPanelSize"
-            android:background="@drawable/ic_color_panel"
-            android:backgroundTint="@color/colorTextWhite"
+            android:background="@drawable/color_panel_white"
             app:layout_constraintStart_toEndOf="@id/color_text_black"
             app:layout_constraintEnd_toStartOf="@id/color_text_red"
             android:layout_margin="10dp"/>
