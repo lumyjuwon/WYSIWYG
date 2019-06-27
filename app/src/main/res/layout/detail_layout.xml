@@ -26,7 +26,7 @@
             android:id="@+id/btn_bold_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
-            android:layout_marginEnd="2dp"
+            android:layout_marginEnd="@dimen/buttonMargin"
             android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_bold" />
 
@@ -34,8 +34,8 @@
             android:id="@+id/btn_bold_italic_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginStart="@dimen/buttonMargin"
+            android:layout_marginEnd="@dimen/buttonMargin"
             android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_italic"
             />
@@ -44,8 +44,8 @@
             android:id="@+id/btn_bold_underline_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginStart="@dimen/buttonMargin"
+            android:layout_marginEnd="@dimen/buttonMargin"
             android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_under"
             />
@@ -54,7 +54,7 @@
             android:id="@+id/btn_bold_strike_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
-            android:layout_marginStart="2dp"
+            android:layout_marginStart="@dimen/buttonMargin"
             android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_strike"
             />
@@ -73,7 +73,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/detailDividerMargin"
-        android:layout_marginEnd="@dimen/detailDividerMargin">
+        android:layout_marginEnd="@dimen/detailDividerMargin"
+        android:layout_marginBottom="@dimen/detailTopDownPadding">
 
         <View
             android:layout_width="match_parent"
@@ -84,7 +85,7 @@
             android:id="@+id/btn_alignLeft_normal"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
-            android:layout_marginEnd="2dp"
+            android:layout_marginEnd="@dimen/buttonMargin"
             android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_left_align" />
 
@@ -92,8 +93,8 @@
             android:id="@+id/btn_bold_alignCenter_normal"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginStart="@dimen/buttonMargin"
+            android:layout_marginEnd="@dimen/buttonMargin"
             android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_center_align" />
 
@@ -102,9 +103,29 @@
             android:id="@+id/btn_bold_alignRight_normal"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
-            android:layout_marginStart="2dp"
+            android:layout_marginStart="@dimen/buttonMargin"
+            android:layout_marginEnd="@dimen/buttonMargin"
             android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_right_align" />
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_img"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="@dimen/buttonMarginBetweenCategory"
+            android:layout_marginEnd="@dimen/buttonMargin"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_img" />
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_video"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="@dimen/buttonMargin"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_video" />
 
         <View
             android:layout_width="match_parent"
@@ -116,16 +137,20 @@
 
 
     <View
-        android:layout_marginStart="@dimen/detailDividerMargin"
-        android:layout_marginEnd="@dimen/detailDividerMargin"
-        style="@style/Divider.Horizontal"/>
+        android:layout_marginStart="@dimen/sideLinePadding"
+        android:layout_marginEnd="@dimen/sideLinePadding"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"/>
+    
+    
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/sideLinePadding"
         android:paddingEnd="@dimen/sideLinePadding"
-        android:layout_marginTop="@dimen/detailDividerMargin"
+        android:layout_marginTop="@dimen/detailTopDownPadding"
         android:layout_marginEnd="@dimen/detailDividerMargin">
 
         <TextView

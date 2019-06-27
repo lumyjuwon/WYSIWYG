@@ -32,7 +32,8 @@
                     android:background="@null"
                     android:layout_gravity="center_vertical"
                     android:fontFamily="@font/arial"
-                    android:textSize="@dimen/titleFontSize"/>
+                    android:textSize="@dimen/titleFontSize"
+                    />
             </LinearLayout>
 
 
