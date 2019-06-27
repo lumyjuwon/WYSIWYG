@@ -28,8 +28,7 @@
             android:layout_height="@dimen/buttonSize"
             android:layout_marginEnd="2dp"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_bold"
-            />
+            android:src="@drawable/ic_bold" />
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_bold_italic_detail"

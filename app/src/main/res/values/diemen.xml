@@ -9,7 +9,7 @@
     <dimen name="detailTextSize">20sp</dimen>
     <dimen name="detailTopDownPadding">10dp</dimen>
     <dimen name="detailDividerMargin">2dp</dimen>
-    <dimen name="insertMargin">10dp</dimen>
+    <dimen name="insertMargin">5dp</dimen>
 
 
 </resources>
