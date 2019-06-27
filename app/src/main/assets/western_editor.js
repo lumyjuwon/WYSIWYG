@@ -51,3 +51,48 @@ WE.rgb2rgba = function (rgba) { // rgb를 rgba로 변환
 WE.submit = function () {
 	location.href = 'we-callback://' + encodeURI(wE.editor.innerHTML);
 };
+
+
+//Input area settings, not tested 
+WE.setPlaceholder = function(placeholder) {
+    WE.editor.setAttribute("placeholder", placeholder);
+}
+
+WE.setBaseTextColor = function(color) {
+    WE.editor.style.color  = color;
+}
+
+WE.setBaseFontSize = function(size) {
+    WE.editor.style.fontSize = size;
+}
+
+WE.setPadding = function(left, top, right, bottom) {
+  WE.editor.style.paddingLeft = left;
+  WE.editor.style.paddingTop = top;
+  WE.editor.style.paddingRight = right;
+  WE.editor.style.paddingBottom = bottom;
+}
+
+WE.setBackgroundColor = function(color) {
+    document.body.style.backgroundColor = color;
+}
+
+WE.setBackgroundImage = function(image) {
+    WE.editor.style.backgroundImage = image;
+}
+
+WE.setWidth = function(size) {
+    WE.editor.style.minWidth = size;
+}
+
+WE.setHeight = function(size) {
+    WE.editor.style.height = size;
+}
+
+WE.setTextAlign = function(align) {
+    WE.editor.style.textAlign = align;
+}
+
+WE.setVerticalAlign = function(align) {
+    WE.editor.style.verticalAlign = align;
+}
