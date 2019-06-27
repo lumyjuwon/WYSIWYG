@@ -7,7 +7,7 @@
     >
 
     <Button
-        android:id="@+id/color_text_black"
+        android:id="@+id/color_back_yellow"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:scaleType="fitCenter"
@@ -15,7 +15,7 @@
         android:layout_margin="10dp"/>
 
     <Button
-        android:id="@+id/color_text_white"
+        android:id="@+id/color_back_green"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:scaleType="fitCenter"
@@ -23,7 +23,7 @@
         android:layout_margin="10dp"/>
 
     <Button
-        android:id="@+id/color_text_red"
+        android:id="@+id/color_back_blue"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:scaleType="fitCenter"
@@ -31,7 +31,7 @@
         android:layout_margin="10dp"/>
 
     <Button
-        android:id="@+id/color_text_blue"
+        android:id="@+id/color_back_red"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:scaleType="fitCenter"
@@ -39,7 +39,7 @@
         android:layout_margin="10dp"/>
 
     <Button
-        android:id="@+id/color_text_green"
+        android:id="@+id/color_back_gray"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:scaleType="fitCenter"
