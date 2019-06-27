@@ -6,14 +6,25 @@ import androidx.appcompat.widget.AppCompatImageButton;
 
 public class EditorButton extends AppCompatImageButton {
 
-    private static OnClickListener mOnClickListener;
+    private static EditorButton instance;
+    private static int UnCheckedColorFilter;
+    private static int CheckedColorFilter;
+
 
     public EditorButton(Context context, AttributeSet attrs){
         super(context ,attrs);
     }
 
-    public static void manageOnClickListener(OnClickListener onClickListener){
-        mOnClickListener = onClickListener;
+    public static void setGlobalOnClickListener(OnClickListener onClickListener){
+        instance.setOnClickListener(onClickListener);
+    }
+
+    public static void setGlobalUnCheckedColorFilter(int color){
+        UnCheckedColorFilter = color;
+    }
+
+    public static void setGlobalCheckedColorFilter(int color){
+        CheckedColorFilter = color;
     }
 
 }

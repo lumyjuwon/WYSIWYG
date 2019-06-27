@@ -40,12 +40,12 @@ public class WysiwygEditor extends LinearLayout {
     private void init(){
         inflate(getContext(), R.layout.frame_wysiwyg, this);
 
-        EditorButton.manageOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+//        EditorButton.setGlobalOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
 
         mButtonSize = findViewById(R.id.btn_size);
         mButtonColor = findViewById(R.id.btn_color);
