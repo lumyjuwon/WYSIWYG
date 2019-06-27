@@ -51,3 +51,7 @@ WE.rgb2rgba = function (rgba) { // rgb를 rgba로 변환
 WE.submit = function () {
 	location.href = 'we-callback://' + encodeURI(wE.editor.innerHTML);
 };
+
+WE.setPlaceholder = function(placeholder) {
+    WE.editor.setAttribute("placeholder", placeholder);
+}
