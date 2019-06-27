@@ -10,8 +10,8 @@ WE.selectionchange = function () {
 	items.fontName = document.queryCommandValue('fontName');
 	items.fontSize = document.queryCommandValue('fontSize');
 	items.bold = document.queryCommandState('bold');
-	items.underline = document.queryCommandState('underline');
 	items.italic = document.queryCommandState('italic');
+	items.underline = document.queryCommandState('underline');
 	items.strikeThrough = document.queryCommandState('strikeThrough');
 	items.superscript = document.queryCommandState('superscript');
 	items.subscript = document.queryCommandState('subscript');
@@ -23,6 +23,8 @@ WE.selectionchange = function () {
 	items.justifyFull = document.queryCommandState('justifyFull');
 	items.insertunorderedList = document.queryCommandState('insertUnorderedList');
 	items.insertorderedList = document.queryCommandState('insertOrderedList');
+
+	//if(items.bold) alert(encodeURI(JSON.stringify(items)));
 
 	location.href = 'we-state://' + encodeURI(JSON.stringify(items));
 };
