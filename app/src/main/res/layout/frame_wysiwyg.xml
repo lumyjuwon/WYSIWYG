@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:id="@+id/edt_headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:text="can" />
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_cfrm"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_gravity=""
+            android:text="con" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_size"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_bold"
+            />
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@id/btn_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_italic"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_italic"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:text="Button"
+            app:layout_constraintStart_toEndOf="@+id/btn_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_under"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_under"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:text="Button"
+            app:layout_constraintStart_toEndOf="@+id/btn_italic"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_color"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_color"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/btn_under"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_align" />
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_align"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/btn_color"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_plus"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_plus"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintStart_toEndOf="@+id/btn_align"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <com.example.wysiwyg.EditorButton
+        android:id="@+id/btn_bgcolor"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:text="Button" />
+
+
+    <com.example.wysiwyg.EditorButton
+        android:id="@+id/btn_strike"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Button" />
+
+
+    <com.example.wysiwyg.EditorButton
+        android:id="@+id/btn_img"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+         />
+
+    <com.example.wysiwyg.EditorButton
+        android:id="@+id/btn_video"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+         />
+
+
+
+
+
+</LinearLayout>
