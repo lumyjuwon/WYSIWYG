@@ -43,14 +43,14 @@ WE.exec = function (cmd, val) { // 기능 실행
 	WE.editor.focus();
 };
 
-WE.insertCss = function (property, value) {
+WE.insertCss = function (property, value) {	// 블록 지정한 영역에 css 속성을 추가하는 함수
 	let select = getSelection();
 	let tag = select.getRangeAt(0).startContainer.parentNode;
 	if (select.toString() == tag.textContent) {	// 선택한 영역과 부모 태그가 동일하면 부모 태그에 속성 추가
 		if (tag.style[property] != value) {
 			tag.style[property] = value;
 		} else {
-			tag.style.removeProperty(property)
+			tag.style.removeProperty(property);
 		}
 		if (tag.style.length == 0) {	// style 속성이 없으면 속성 삭제
 			tag.removeAttribute('style');
