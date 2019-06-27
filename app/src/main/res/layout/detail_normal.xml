@@ -3,4 +3,168 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="2dp"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_italic_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_underline_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_strike_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="2dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_alignLeft_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="2dp"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_alignCenter_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_alignRight_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="2dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="23sp"
+            android:text="Text Size"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_sizeUp_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="5dp"/>
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_sizeDown_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="23sp"
+            android:text="Text Color"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_color_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="23sp"
+            android:text="Highlight Color"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bgcolor_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp"/>
+    </LinearLayout>
+
+
+
+
 </LinearLayout>

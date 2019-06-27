@@ -3,4 +3,41 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_alignLeft_para"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="2dp"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_alignCenter_para"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_alignRight_para"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="2dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
 </LinearLayout>
