@@ -24,7 +24,7 @@
             android:id="@+id/color_back_yellow"
             android:layout_width="@dimen/colorPanelSize"
             android:layout_height="@dimen/colorPanelSize"
-            android:background="@drawable/color_panel"
+            android:background="@drawable/ic_color_panel"
             app:layout_constraintStart_toEndOf="@id/color_back_none"
             app:layout_constraintEnd_toStartOf="@id/color_back_green"
             android:layout_margin="10dp"/>
@@ -35,7 +35,7 @@
             android:layout_height="@dimen/colorPanelSize"
             app:layout_constraintStart_toEndOf="@id/color_back_yellow"
             app:layout_constraintEnd_toStartOf="@id/color_back_blue"
-            android:background="@drawable/color_panel"
+            android:background="@drawable/ic_color_panel"
             android:layout_margin="10dp"/>
 
         <Button
@@ -44,7 +44,7 @@
             android:layout_height="@dimen/colorPanelSize"
             app:layout_constraintStart_toEndOf="@id/color_back_green"
             app:layout_constraintEnd_toStartOf="@id/color_back_red"
-            android:background="@drawable/color_panel"
+            android:background="@drawable/ic_color_panel"
             android:layout_margin="10dp"/>
 
 
@@ -54,7 +54,7 @@
             android:layout_height="@dimen/colorPanelSize"
             app:layout_constraintStart_toEndOf="@id/color_back_blue"
             app:layout_constraintEnd_toStartOf="@id/color_back_gray"
-            android:background="@drawable/color_panel"
+            android:background="@drawable/ic_color_panel"
             android:layout_margin="10dp"/>
 
         <Button
@@ -63,7 +63,7 @@
             android:layout_height="@dimen/colorPanelSize"
             app:layout_constraintStart_toEndOf="@id/color_back_red"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/color_panel"
+            android:background="@drawable/ic_color_panel"
             android:layout_margin="10dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
