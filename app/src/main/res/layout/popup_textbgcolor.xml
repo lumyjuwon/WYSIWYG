@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/color_back_none"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/color_text_white"
+            android:background="@drawable/color_panel_none"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/color_back_yellow"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            android:background="@drawable/color_panel"
+            app:layout_constraintStart_toEndOf="@id/color_back_none"
+            app:layout_constraintEnd_toStartOf="@id/color_back_green"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/color_back_green"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toEndOf="@id/color_back_yellow"
+            app:layout_constraintEnd_toStartOf="@id/color_back_blue"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/color_back_blue"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toEndOf="@id/color_back_green"
+            app:layout_constraintEnd_toStartOf="@id/color_back_red"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
+
+
+        <Button
+            android:id="@+id/color_back_red"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toEndOf="@id/color_back_blue"
+            app:layout_constraintEnd_toStartOf="@id/color_back_gray"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/color_back_gray"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toEndOf="@id/color_back_red"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
