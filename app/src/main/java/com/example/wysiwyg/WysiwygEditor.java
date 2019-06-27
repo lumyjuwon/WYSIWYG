@@ -3,12 +3,18 @@ package com.example.wysiwyg;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
 public class WysiwygEditor extends LinearLayout{
+    private final String SET_HTML = "file:///android_asset/editor.html";
 
+    @SuppressWarnings("FieldCanBeLocal")
+    private WebView mWebView;
     @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonSize;
     @SuppressWarnings("FieldCanBeLocal")
@@ -52,24 +58,37 @@ public class WysiwygEditor extends LinearLayout{
     private void init(){
         inflate(getContext(), R.layout.frame_wysiwyg, this);
 
+        // WebView
+        mWebView = findViewById(R.id.webview);
+        mWebView.setWebChromeClient(new WebChromeClient());
+        mWebView.setWebViewClient(new WysiwygWebView());
+        WebSettings settings = mWebView.getSettings();
+        settings.setJavaScriptEnabled(true);
+
+        mWebView.loadUrl(SET_HTML);
+
+        // Editor Button
         EditorButton.setGlobalOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch(v.getId()){
                     case R.id.btn_size:
-                        System.out.println("A");
                         break;
                     case R.id.btn_color:
                         break;
                     case R.id.btn_bgcolor:
                         break;
                     case R.id.btn_bold:
+                        mWebView.evaluateJavascript("javascript:WE.exec('bold');", null);
                         break;
                     case R.id.btn_italic:
+                        mWebView.evaluateJavascript("javascript:WE.exec('italic');", null);
                         break;
                     case R.id.btn_under:
+                        mWebView.evaluateJavascript("javascript:WE.exec('underline');", null);
                         break;
                     case R.id.btn_strike:
+                        mWebView.evaluateJavascript("javascript:WE.exec('strikeThrough');", null);
                         break;
                     case R.id.btn_align:
                         break;

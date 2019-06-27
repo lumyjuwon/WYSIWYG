@@ -25,18 +25,16 @@ WE.selectionchange = function () {
 	items.insertunorderedList = document.queryCommandState('insertUnorderedList');
 	items.insertorderedList = document.queryCommandState('insertOrderedList');
 
-	// location.href = 'we-state://' + encodeURI(JSON.stringify(items));
+	// for test
+	/*state = '';
+	for (var i in items) state += i + ': ' + items[i] + ', ';*/
 
-	// 테스트용
-	callback = '';
-	for (var i in items) {
-		callback += i + ': ' + items[i] + ', ';
-	}
+	// location.href = 'we-state://' + encodeURI(JSON.stringify(items));
 };
 
 document.addEventListener('selectionchange', WE.selectionchange);   // 커서 이동 시 이벤트
 
-WE.exec = function (cmd, val) { // 기능 실행
+WE.exec = function (cmd, val) { // execCommand로 동작하는 기능 처리
 	val = (typeof(val) !== 'undefined') ? val : null;
 	document.execCommand("styleWithCSS", null, (val !== null));
 	document.execCommand(cmd, false, val);
@@ -50,6 +48,6 @@ WE.rgb2rgba = function (rgba) { // rgb를 rgba로 변환
 	return rgba;
 };
 
- WE.submit = function () {
+WE.submit = function () {
 	location.href = 'we-callback://' + encodeURI(wE.editor.innerHTML);
- };
+};
