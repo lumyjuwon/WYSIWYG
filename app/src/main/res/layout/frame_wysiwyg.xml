@@ -99,6 +99,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_bold"
+            android:src="@drawable/ic_color"
+
             />
 
         <com.example.wysiwyg.EditorButton
@@ -108,7 +110,8 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@id/btn_color"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_italic"/>
+            app:layout_constraintEnd_toStartOf="@+id/btn_italic"
+            android:src="@drawable/ic_bold"/>
 
 
         <com.example.wysiwyg.EditorButton
@@ -118,7 +121,8 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@+id/btn_bold"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_under"/>
+            app:layout_constraintEnd_toStartOf="@+id/btn_under"
+            android:src="@drawable/ic_italic"/>
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_under"
@@ -127,7 +131,8 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@+id/btn_italic"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_align"/>
+            app:layout_constraintEnd_toStartOf="@+id/btn_align"
+            android:src="@drawable/ic_under"/>
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_align"
@@ -136,7 +141,8 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@+id/btn_under"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_insert" />
+            app:layout_constraintEnd_toStartOf="@+id/btn_insert"
+            android:src="@drawable/ic_left_align"/>
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_insert"
@@ -145,7 +151,8 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@+id/btn_align"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_plus"/>
+            app:layout_constraintEnd_toStartOf="@+id/btn_plus"
+            android:src="@drawable/ic_insert"/>
 
 
         <com.example.wysiwyg.EditorButton
