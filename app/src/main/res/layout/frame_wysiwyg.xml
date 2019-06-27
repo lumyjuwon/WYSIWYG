@@ -16,12 +16,9 @@
             android:id="@+id/edt_headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_weight="1"
             android:textSize="35sp"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_cfrm"
@@ -128,19 +125,20 @@
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toEndOf="@+id/btn_align"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btn_plus"
+            app:layout_constraintEnd_toStartOf="@+id/btn_detail"
             android:background="@color/colorBackground"
             android:src="@drawable/ic_insert"/>
 
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_plus"
+            android:id="@+id/btn_detail"
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="2dp"
             app:layout_constraintStart_toEndOf="@+id/btn_insert"
             app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_detail"
             android:background="@color/colorBackground"
             app:layout_constraintEnd_toEndOf="parent"/>
 
