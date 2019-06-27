@@ -22,16 +22,14 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_cancel"
-            android:layout_width="65dp"
-            android:layout_height="match_parent"
-            android:text="can" />
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_cfrm"
             android:layout_width="65dp"
             android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            android:src="@drawable/ic_cfrm"
+            android:tint="@color/colorPrimaryDark"
             android:text="con" />
 
     </LinearLayout>
