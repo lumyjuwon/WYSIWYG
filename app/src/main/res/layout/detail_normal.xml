@@ -6,7 +6,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
         <View
             android:layout_width="match_parent"
@@ -158,6 +159,36 @@
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_bgcolor_normal"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textSize="23sp"
+            android:text="Intendation"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_indentation_in"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="5dp"/>
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_indentation_out"
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:layout_marginStart="5dp"
