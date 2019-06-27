@@ -10,11 +10,13 @@ public enum EvalCommand{
     SUPERSCRIPT("superscript"),
     SUBSCRIPT("subscript"),
     FORECOLOR("foreColor"),
-    BACKGROUNDCOLOR("backColor"),
+    BACKCOLOR("backColor"),
     JUSTIFYLEFT("justifyLeft"),
     JUSTIFYCENTER("justifyCenter"),
-    JUSTIFYRIGHT("justifyRight");
-
+    JUSTIFYRIGHT("justifyRight"),
+    INSERTUNORDEREDLIST("insertUnorderedList"),
+    INSERTORDEREDLIST("insertOrderedList");
+    
     private final String cmd;
 
     private EvalCommand(String cmd){

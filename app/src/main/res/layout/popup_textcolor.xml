@@ -3,27 +3,60 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ffffffff">
+    android:background="@color/colorBackground"
+    >
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/color_black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:scaleType="fitCenter" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/color_white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:scaleType="fitCenter" />
+        <Button
+            android:id="@+id/color_text_black"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/color_text_white"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/color_red"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:scaleType="fitCenter" />
+        <Button
+            android:id="@+id/color_text_white"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            android:background="@drawable/color_panel"
+            app:layout_constraintStart_toEndOf="@id/color_text_black"
+            app:layout_constraintEnd_toStartOf="@id/color_text_red"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/color_text_red"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toEndOf="@id/color_text_white"
+            app:layout_constraintEnd_toStartOf="@id/color_text_blue"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/color_text_blue"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toEndOf="@id/color_text_red"
+            app:layout_constraintEnd_toStartOf="@id/color_text_green"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/color_text_green"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toEndOf="@id/color_text_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </LinearLayout>
