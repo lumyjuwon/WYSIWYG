@@ -124,14 +124,11 @@
 
 
 
-
-
     <com.example.wysiwyg.EditorButton
         android:id="@+id/btn_bgcolor"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:text="Button" />
-
 
 
     <com.example.wysiwyg.EditorButton
