@@ -68,8 +68,8 @@
 
     </LinearLayout>
 
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/detailDividerMargin"
@@ -78,15 +78,15 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_alignLeft_normal"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginEnd="2dp"
-            android:src="@drawable/ic_left_align"
-            android:background="?attr/actionBarItemBackground"/>
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_left_align" />
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_bold_alignCenter_normal"
@@ -94,8 +94,8 @@
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="2dp"
             android:layout_marginEnd="2dp"
-            android:src="@drawable/ic_center_align"
-            android:background="?attr/actionBarItemBackground"/>
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_center_align" />
 
 
         <com.example.wysiwyg.EditorButton
@@ -103,16 +103,22 @@
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="2dp"
-            android:src="@drawable/ic_right_align"
-            android:background="?attr/actionBarItemBackground"/>
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_right_align" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
 
     </LinearLayout>
+
+
+    <View
+        android:layout_marginStart="@dimen/detailDividerMargin"
+        android:layout_marginEnd="@dimen/detailDividerMargin"
+        style="@style/Divider.Horizontal"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -253,6 +259,57 @@
             android:layout_marginStart="5dp"
             android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_indentation_out"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding"
+        android:layout_marginTop="@dimen/detailDividerMargin"
+        android:layout_marginEnd="@dimen/detailDividerMargin"
+        >
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detailTextSize"
+            android:layout_gravity="center_vertical"
+            android:text="Line Spacing"
+            android:fontFamily="@font/arial"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_spacing_down"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginEnd="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_size_down"/>
+
+        <TextView
+            android:layout_width="@dimen/spacingWidth"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/arial"
+            android:gravity="center"
+            android:textSize="@dimen/lineSpacing"
+            android:text="1"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_spacing_up"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_size_up"
             />
     </LinearLayout>
 

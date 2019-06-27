@@ -13,16 +13,32 @@
         android:paddingStart="@dimen/sideLinePadding"
         android:paddingEnd="@dimen/sideLinePadding"
         >
-
-        <EditText
-            android:id="@+id/edt_headline"
+        <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@null"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:fontFamily="@font/arial"
-            android:textSize="35sp"/>
+            android:layout_marginEnd="@dimen/sideLinePadding"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edt_headline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/arial"
+                    android:textSize="@dimen/titleFontSize"/>
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_cfrm"
@@ -103,9 +119,20 @@
                 android:layout_height="@dimen/buttonSize"
                 app:layout_constraintStart_toEndOf="@+id/btn_bold"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btn_align"
+                app:layout_constraintEnd_toStartOf="@+id/btn_under"
                 android:background="?attr/actionBarItemBackground"
                 android:src="@drawable/ic_italic"/>
+
+
+            <com.example.wysiwyg.EditorButton
+                android:id="@+id/btn_under"
+                android:layout_width="@dimen/buttonSize"
+                android:layout_height="@dimen/buttonSize"
+                app:layout_constraintStart_toEndOf="@+id/btn_italic"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_align"
+                android:background="?attr/actionBarItemBackground"
+                android:src="@drawable/ic_under"/>
 
 
 
@@ -113,28 +140,20 @@
                 android:id="@+id/btn_align"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
-                app:layout_constraintStart_toEndOf="@+id/btn_italic"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btn_insert"
-                android:background="?attr/actionBarItemBackground"
-                android:src="@drawable/ic_left_align"/>
-
-            <com.example.wysiwyg.EditorButton
-                android:id="@+id/btn_insert"
-                android:layout_width="@dimen/buttonSize"
-                android:layout_height="@dimen/buttonSize"
-                app:layout_constraintStart_toEndOf="@+id/btn_align"
+                app:layout_constraintStart_toEndOf="@+id/btn_under"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/btn_detail"
                 android:background="?attr/actionBarItemBackground"
-                android:src="@drawable/ic_insert"/>
+                android:src="@drawable/ic_left_align"/>
+
+
 
 
             <com.example.wysiwyg.EditorButton
                 android:id="@+id/btn_detail"
                 android:layout_width="@dimen/buttonSize"
                 android:layout_height="@dimen/buttonSize"
-                app:layout_constraintStart_toEndOf="@+id/btn_insert"
+                app:layout_constraintStart_toEndOf="@+id/btn_align"
                 app:layout_constraintTop_toTopOf="parent"
                 android:src="@drawable/ic_detail"
                 android:background="?attr/actionBarItemBackground"

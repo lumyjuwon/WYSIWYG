@@ -100,8 +100,8 @@ public class WysiwygEditor extends LinearLayout implements WysiwygWebView.StateE
         mButtonItalic = findViewById(R.id.btn_italic);
         mButtonItalic.setOnClickListener(this);
 
-        mButtonUnder = findViewById(R.id.btn_under);
-        mButtonUnder.setOnClickListener(this);
+//        mButtonUnder = findViewById(R.id.btn_under);
+//        mButtonUnder.setOnClickListener(this);
 
 //        mButtonStrike = findViewById(R.id.btn_strike);
 //        mButtonStrike.setOnClickListener(this);
