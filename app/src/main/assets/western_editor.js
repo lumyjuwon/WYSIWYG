@@ -41,7 +41,10 @@ WE.exec = function (cmd, val) { // execCommand로 동작하는 기능 처리
 
 WE.insertCss = function (property, value) {	// 블록 지정한 영역에 css 속성을 추가하는 함수
 	let select = getSelection();
-	let tag = select.getRangeAt(0).startContainer.parentNode;
+	let tag = select.getRangeAt(0).startContainer;
+	if (tag.parentNode.id != 'editor') {
+		tag = tag.parentNode;
+	}
 	if (select.toString() == tag.textContent) {	// 선택한 영역과 부모 태그가 동일하면 부모 태그에 속성 추가
 		if (tag.style[property] != value) {
 			tag.style[property] = value;
@@ -78,12 +81,16 @@ WE.lineHeight = function (height) {
 					WE.editor.insertBefore(node, childs[i]);
 					node.appendChild(childs[i + 1]);
 				} else {
-					node.appendChild(childs[i]);
+					node.appendChild(childs[i--]);
 				}
 			}
 		}
 	}
-	WE.selectElement(tagOrigin);
+	tag = tagOrigin;
+	while (tag.tagName != 'DIV') {	// 해당 줄 선택
+		tag = tag.parentNode;
+	}
+	WE.selectElement(tag);
 	WE.insertCss('line-height', height);
 };
 
