@@ -6,7 +6,7 @@ var callback;	// 테스트용
 WE.editor = document.getElementById('editor');
 
 WE.selectionchange = function () {
-	var items = {};
+	let items = {};
 
 	items.fontName = document.queryCommandValue('fontName');
 	items.fontSize = document.queryCommandValue('fontSize');
@@ -29,7 +29,7 @@ WE.selectionchange = function () {
 
 	// 테스트용
 	callback = '';
-	for (var i in items) {
+	for (let i in items) {
 		callback += i + ': ' + items[i] + ', ';
 	}
 };
