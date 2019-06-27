@@ -297,6 +297,48 @@
             />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding"
+        android:layout_marginTop="@dimen/detailDividerMargin"
+        android:layout_marginEnd="@dimen/detailDividerMargin"
+        >
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detailTextSize"
+            android:layout_gravity="center_vertical"
+            android:text="List Type"
+            android:fontFamily="@font/arial"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_unordered"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginEnd="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_unordered"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_orderd"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_ordered"
+            />
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
