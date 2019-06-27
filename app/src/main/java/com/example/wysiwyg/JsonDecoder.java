@@ -38,7 +38,4 @@ public class JsonDecoder {
             return null;
         }
     }
-
-    public Integer get;
-
 }

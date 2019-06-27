@@ -11,7 +11,7 @@ public class WysiwygWebView extends WebViewClient{
     private HashMap<String, String> stateMap = new HashMap<String, String>();
 
     public interface StateEventListener{
-        void onReceivedEvent(HashMap<String, String> map);
+        void onReceivedEvent(String str);
     }
 
     private StateEventListener stateEventListener;
@@ -22,7 +22,7 @@ public class WysiwygWebView extends WebViewClient{
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest stateURI){
-        System.out.println("URI load...");
+        //System.out.println("URI load...");
         JsonDecoder jsonDecoder = JsonDecoder.decode(stateURI.getUrl().toString());
         for(EvalCommand cmd : EvalCommand.values()) {
             stateMap.put(cmd.name(), jsonDecoder.getValue(cmd.name()));
@@ -42,9 +42,7 @@ public class WysiwygWebView extends WebViewClient{
             catch (Exception e) {
                 Log.d("JsonDecoder", e.toString());
             }
-
         }
-
         return true;
     }
 

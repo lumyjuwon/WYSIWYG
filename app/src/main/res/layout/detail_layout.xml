@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/divider"
+    android:dividerPadding="10dp"
+    android:showDividers="middle"
+    android:paddingTop="@dimen/detailTopDownPadding"
+    android:paddingBottom="@dimen/detailTopDownPadding">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/detailDividerMargin"
+        android:layout_marginEnd="@dimen/detailDividerMargin"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_detail"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginEnd="2dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_bold" />
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_italic_detail"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_italic"
+            />
+
+         <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_underline_detail"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_under"
+            />
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_strike_detail"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="2dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_strike"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/detailDividerMargin"
+        android:layout_marginEnd="@dimen/detailDividerMargin">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_alignLeft_normal"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginEnd="2dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_left_align" />
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_alignCenter_normal"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_center_align" />
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bold_alignRight_normal"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="2dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_right_align" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_marginStart="@dimen/detailDividerMargin"
+        android:layout_marginEnd="@dimen/detailDividerMargin"
+        style="@style/Divider.Horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding"
+        android:layout_marginTop="@dimen/detailDividerMargin"
+        android:layout_marginEnd="@dimen/detailDividerMargin">
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detailTextSize"
+            android:layout_gravity="center_vertical"
+            android:text="Text Size"
+            android:fontFamily="@font/arial"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_sizeUp_normal"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginEnd="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_size_down"/>
+
+        <TextView
+            android:id="@+id/view_textsize"
+            android:layout_width="@dimen/spacingWidth"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/arial"
+            android:gravity="center"
+            android:textSize="@dimen/lineSpacing"
+            android:text="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_sizeDown_normal"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_size_up"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding"
+        android:layout_marginTop="@dimen/detailDividerMargin"
+        android:layout_marginEnd="@dimen/detailDividerMargin">
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detailTextSize"
+            android:layout_gravity="center_vertical"
+            android:text="Text Color"
+            android:fontFamily="@font/arial"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_color_detail"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/color_panel_view"
+            android:padding="@dimen/colorPanelPadding"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding"
+        android:layout_marginTop="@dimen/detailDividerMargin"
+        android:layout_marginEnd="@dimen/detailDividerMargin">
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detailTextSize"
+            android:layout_gravity="center_vertical"
+            android:text="Highlight Color"
+            android:fontFamily="@font/arial"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_bgcolor_detail"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/color_panel_none"
+            android:padding="@dimen/colorPanelPadding"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding"
+        android:layout_marginTop="@dimen/detailDividerMargin"
+        android:layout_marginEnd="@dimen/detailDividerMargin"
+        >
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detailTextSize"
+            android:layout_gravity="center_vertical"
+            android:text="Indentation"
+            android:fontFamily="@font/arial"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_indentation_in"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginEnd="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_indentation_in"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_indentation_out"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_indentation_out"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding"
+        android:layout_marginTop="@dimen/detailDividerMargin"
+        android:layout_marginEnd="@dimen/detailDividerMargin"
+        >
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/detailTextSize"
+            android:layout_gravity="center_vertical"
+            android:text="Line Spacing"
+            android:fontFamily="@font/arial"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_spacing_down"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginEnd="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_size_down"/>
+
+        <TextView
+            android:id="@+id/view_spacing"
+            android:layout_width="@dimen/spacingWidth"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/arial"
+            android:gravity="center"
+            android:textSize="@dimen/lineSpacing"
+            android:text="1"/>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_spacing_up"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:layout_marginStart="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_size_up"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

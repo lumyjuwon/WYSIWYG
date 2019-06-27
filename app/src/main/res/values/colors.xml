@@ -8,12 +8,18 @@
     <color name="colorTextWhite">#ffffff</color>
     <color name="colorTextRed">#EA2621</color>
     <color name="colorTextBlue">#2525BA</color>
-    <color name="colorTextGreen">#146D20</color>
+    <color name="colorTextGreen">#19882A</color>
     <color name="colorBackYellow">#FCC047</color>
     <color name="colorBackGreen">#97D86C</color>
     <color name="colorBackBlue">#709EFC</color>
     <color name="colorBackRed">#F96E90</color>
     <color name="colorBackGray">#9B9B9B</color>
+
+
+    <color name="colorText">#A09F9F</color>
+
+    <color name="colorDivider">#A09F9F</color>
+
 
 
 

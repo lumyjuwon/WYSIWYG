@@ -2,19 +2,27 @@ package com.example.wysiwyg;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.Nullable;
 
 import java.util.HashMap;
 
-public class WysiwygEditor extends LinearLayout implements WysiwygWebView.StateEventListener{
+public class WysiwygEditor extends LinearLayout implements WysiwygWebView.StateEventListener, EditorButton.OnClickListener{
     private final String SET_HTML = "file:///android_asset/editor.html";
     private WysiwygWebView wysiwygWebView;
+    private LayoutInflater layoutInflater;
+    private View popupView;
+    private PopupWindow mPopupWindow;
 
     @SuppressWarnings("FieldCanBeLocal")
     private WebView mWebView;
@@ -77,76 +85,91 @@ public class WysiwygEditor extends LinearLayout implements WysiwygWebView.StateE
         // Editor Button
         EditorButton.setGlobalCheckedColorFilter(R.color.colorBackBlue);
         EditorButton.setGlobalUnCheckedColorFilter(R.color.colorTextBlack);
-        EditorButton.setGlobalOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Type down casting
-                EditorButton btn = (EditorButton) v;
-
-                // Change Color Filter
-                btn.changeClicked();
-                btn.changeColorFilter();
-
-                // Function
-                switch(v.getId()){
-                    case R.id.btn_size:
-                        break;
-                    case R.id.btn_color:
-                        break;
-                    case R.id.btn_bold:
-                        mWebView.evaluateJavascript("javascript:WE.exec('" + EvalCommand.BOLD.toString() + "');", null);
-                        break;
-                    case R.id.btn_italic:
-                        mWebView.evaluateJavascript("javascript:WE.exec('" + EvalCommand.ITALIC.toString() + "');", null);
-                        break;
-                    case R.id.btn_under:
-                        mWebView.evaluateJavascript("javascript:WE.exec('" + EvalCommand.UNDERLINE.toString() + "');", null);
-                        break;
-                }
-            }
-        });
 
         mButtonSize = findViewById(R.id.btn_size);
-        mButtonSize.setOnClickListener(EditorButton.getOnClickListener());
+        mButtonSize.setOnClickListener(this);
         // mButtonSize.setColorFilter
 
         mButtonColor = findViewById(R.id.btn_color);
-        mButtonColor.setOnClickListener(EditorButton.getOnClickListener());
+        mButtonColor.setOnClickListener(this);
 
 //        mButtonBgColor = findViewById(R.id.btn_bgcolor);
-//        mButtonBgColor.setOnClickListener(EditorButton.getOnClickListener());
+//        mButtonBgColor.setOnClickListener(this);
 
         mButtonBold = findViewById(R.id.btn_bold);
-        mButtonBold.setOnClickListener(EditorButton.getOnClickListener());
+        mButtonBold.setOnClickListener(this);
 
         mButtonItalic = findViewById(R.id.btn_italic);
-        mButtonItalic.setOnClickListener(EditorButton.getOnClickListener());
+        mButtonItalic.setOnClickListener(this);
 
-        mButtonUnder = findViewById(R.id.btn_under);
-        mButtonUnder.setOnClickListener(EditorButton.getOnClickListener());
+//        mButtonUnder = findViewById(R.id.btn_under);
+//        mButtonUnder.setOnClickListener(this);
 
 //        mButtonStrike = findViewById(R.id.btn_strike);
-//        mButtonStrike.setOnClickListener(EditorButton.getOnClickListener());
+//        mButtonStrike.setOnClickListener(this);
 
         mButtonAlign = findViewById(R.id.btn_align);
-        mButtonAlign.setOnClickListener(EditorButton.getOnClickListener());
+        mButtonAlign.setOnClickListener(this);
 
 //        mButtonImg = findViewById(R.id.btn_img);
-//        mButtonImg.setOnClickListener(EditorButton.getOnClickListener());
+//        mButtonImg.setOnClickListener(this);
 //
 //        mButtonVideo = findViewById(R.id.btn_video);
-//        mButtonVideo.setOnClickListener(EditorButton.getOnClickListener());
+//        mButtonVideo.setOnClickListener(this);
 
         mButtonConfirm = findViewById(R.id.btn_cfrm);
-        mButtonConfirm.setOnClickListener(EditorButton.getOnClickListener());
+        mButtonConfirm.setOnClickListener(this);
 
 //        mButtonCancel = findViewById(R.id.btn_cancel);
-//        mButtonCancel.setOnClickListener(EditorButton.getOnClickListener());
+//        mButtonCancel.setOnClickListener(this);
 
     }
 
     @Override
-    public void onReceivedEvent(HashMap<String, String> map) {
+    public void onReceivedEvent(String s) {
+    }
 
+    @Override
+    public void onClick(View v) {
+        // down casting
+        EditorButton btn = (EditorButton) v;
+
+        // Change Clicked boolean;
+        btn.changeClicked();
+        // btn.changeColorFilter();
+
+        // Function
+        switch (v.getId()) {
+            case R.id.btn_color:
+                showColorPopupWindow(v);
+                break;
+            case R.id.btn_size:
+                break;
+            case R.id.btn_bold:
+                mWebView.evaluateJavascript("javascript:WE.exec('" + EvalCommand.BOLD.toString() + "');", null);
+                break;
+            case R.id.btn_italic:
+                mWebView.evaluateJavascript("javascript:WE.exec('" + EvalCommand.ITALIC.toString() + "');", null);
+                break;
+            case R.id.btn_under:
+                mWebView.evaluateJavascript("javascript:WE.exec('" + EvalCommand.UNDERLINE.toString() + "');", null);
+                break;
+        }
+    }
+
+    public void showColorPopupWindow(View view){
+        layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        popupView =layoutInflater.inflate(R.layout.popup_textcolor, null);
+        mPopupWindow = new PopupWindow(popupView, RelativeLayout.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
+        mPopupWindow.setAnimationStyle(1); // 생성 애니메이션 -1, 생성 애니메이션 사용 안 함 0
+        mPopupWindow.showAsDropDown(view, -20, - 250);
+
+        Button colorTextBlackButton =findViewById(R.id.color_text_black);
+        // colorTextBlackButton.backgroundTint
+    }
+
+    public void closePopupWindow(){
+        if(mPopupWindow.isShowing())
+            mPopupWindow.dismiss();
     }
 }
