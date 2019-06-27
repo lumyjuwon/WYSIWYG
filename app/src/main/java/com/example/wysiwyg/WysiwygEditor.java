@@ -7,19 +7,31 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
-public class WysiwygEditor extends LinearLayout {
+public class WysiwygEditor extends LinearLayout{
 
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonSize;
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonColor;
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonBgColor;
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonBold;
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonItalic;
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonUnder;
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonStrike;
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonAlign;
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonImg;
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonVideo;
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonConfirm;
+    @SuppressWarnings("FieldCanBeLocal")
     private EditorButton mButtonCancel;
 
     public WysiwygEditor(Context context) {
@@ -40,25 +52,75 @@ public class WysiwygEditor extends LinearLayout {
     private void init(){
         inflate(getContext(), R.layout.frame_wysiwyg, this);
 
-//        EditorButton.setGlobalOnClickListener(new OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+        EditorButton.setGlobalOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch(v.getId()){
+                    case R.id.btn_size:
+                        System.out.println("A");
+                        break;
+                    case R.id.btn_color:
+                        break;
+                    case R.id.btn_bgcolor:
+                        break;
+                    case R.id.btn_bold:
+                        break;
+                    case R.id.btn_italic:
+                        break;
+                    case R.id.btn_under:
+                        break;
+                    case R.id.btn_strike:
+                        break;
+                    case R.id.btn_align:
+                        break;
+                    case R.id.btn_img:
+                        break;
+                    case R.id.btn_video:
+                        break;
+                    case R.id.btn_cfrm:
+                        break;
+                    case R.id.btn_cancel:
+                        break;
+                }
+            }
+        });
 
         mButtonSize = findViewById(R.id.btn_size);
+        mButtonSize.setOnClickListener(EditorButton.getOnClickListener());
+
         mButtonColor = findViewById(R.id.btn_color);
+        mButtonColor.setOnClickListener(EditorButton.getOnClickListener());
+
         mButtonBgColor = findViewById(R.id.btn_bgcolor);
+        mButtonBgColor.setOnClickListener(EditorButton.getOnClickListener());
+
         mButtonBold = findViewById(R.id.btn_bold);
+        mButtonBold.setOnClickListener(EditorButton.getOnClickListener());
+
         mButtonItalic = findViewById(R.id.btn_italic);
+        mButtonItalic.setOnClickListener(EditorButton.getOnClickListener());
+
         mButtonUnder = findViewById(R.id.btn_under);
+        mButtonUnder.setOnClickListener(EditorButton.getOnClickListener());
+
         mButtonStrike = findViewById(R.id.btn_strike);
+        mButtonStrike.setOnClickListener(EditorButton.getOnClickListener());
+
         mButtonAlign = findViewById(R.id.btn_align);
+        mButtonAlign.setOnClickListener(EditorButton.getOnClickListener());
+
         mButtonImg = findViewById(R.id.btn_img);
+        mButtonImg.setOnClickListener(EditorButton.getOnClickListener());
+
         mButtonVideo = findViewById(R.id.btn_video);
+        mButtonVideo.setOnClickListener(EditorButton.getOnClickListener());
+
         mButtonConfirm = findViewById(R.id.btn_cfrm);
+        mButtonConfirm.setOnClickListener(EditorButton.getOnClickListener());
+
         mButtonCancel = findViewById(R.id.btn_cancel);
+        mButtonCancel.setOnClickListener(EditorButton.getOnClickListener());
 
     }
+
 }
