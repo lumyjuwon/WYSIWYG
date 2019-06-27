@@ -15,6 +15,8 @@ import android.widget.RelativeLayout;
 
 import androidx.annotation.Nullable;
 
+import java.util.HashMap;
+
 public class WysiwygEditor extends LinearLayout implements WysiwygWebView.StateEventListener, EditorButton.OnClickListener{
     private final String SET_HTML = "file:///android_asset/editor.html";
     private WysiwygWebView wysiwygWebView;
@@ -124,8 +126,7 @@ public class WysiwygEditor extends LinearLayout implements WysiwygWebView.StateE
     }
 
     @Override
-    public void onReceivedEvent(String state) {
-        System.out.println("Listener " + state);
+    public void onReceivedEvent(String s) {
     }
 
     @Override

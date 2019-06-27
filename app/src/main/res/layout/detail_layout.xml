@@ -137,8 +137,8 @@
 
 
     <View
-        android:layout_marginStart="@dimen/sideLinePadding"
-        android:layout_marginEnd="@dimen/sideLinePadding"
+        android:layout_marginStart="@dimen/dividerPadding"
+        android:layout_marginEnd="@dimen/dividerPadding"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@android:color/darker_gray"/>

@@ -26,11 +26,12 @@ public class JsonDecoder {
         return jsonDecoder;
     }
 
-    public Integer getValue(String key){
+    public String getValue(String key){
         try {
             // Convert Object type to String
-            items = new JSONObject(mJson);
-            return 1;
+            items = new JSONObject(mJson.toUpperCase());
+            //if(key.equals("BOLD")) System.out.println(mJson);
+            return items.get(key).toString();
         }
         catch(Exception e){
             Log.d("JsonDecoder", e.toString());

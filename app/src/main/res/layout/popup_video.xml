@@ -2,18 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_popup"
+    android:layout_marginStart="@dimen/videoPopupMargin"
+    android:layout_marginEnd="@dimen/videoPopupMargin"
+    android:padding="@dimen/videoPopupMargin">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/arial"
         android:textSize="@dimen/detailTextSize"
-        android:background="@null"/>
+        android:text="Type the url of youtube video"
+        android:layout_margin="10dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edt_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial"
+            android:layout_margin="10dp"
+            android:textSize="@dimen/detailTextSize"
+            />
+
+    </HorizontalScrollView>
+
+
+
+
 
 </LinearLayout>

@@ -3,10 +3,10 @@
     <dimen name="colorPanelSize">25dp</dimen>
     <dimen name="colorPanelViewSize">25dp</dimen>
     <dimen name="colorPanelPadding">12dp</dimen>
-    <dimen name="sideLinePadding">15dp</dimen>
+    <dimen name="sideLinePadding">20dp</dimen>
     <dimen name="buttonConfirmSize">65dp</dimen>
-    <dimen name="buttonSize">50dp</dimen>
-    <dimen name="detailTextSize">20sp</dimen>
+    <dimen name="buttonSize">45dp</dimen>
+    <dimen name="detailTextSize">18sp</dimen>
     <dimen name="detailTopDownPadding">10dp</dimen>
     <dimen name="detailDividerMargin">2dp</dimen>
     <dimen name="insertMargin">5dp</dimen>
@@ -15,5 +15,12 @@
     <dimen name="spacingWidth">50sp</dimen>
     <dimen name="buttonMargin">2dp</dimen>
     <dimen name="buttonMarginBetweenCategory">9dp</dimen>
+    <dimen name="toolbarMargin">5dp</dimen>
+
+
+    <dimen name="dividerPadding">23dp</dimen>
+
+
+    <dimen name="videoPopupMargin">20dp</dimen>
 
 </resources>
