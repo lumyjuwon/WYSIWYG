@@ -1,7 +1,6 @@
 "use strict";
 
 var WE = {};
-var callback;	// 테스트용
 
 WE.editor = document.getElementById('editor');
 
@@ -25,11 +24,7 @@ WE.selectionchange = function () {
 	items.insertunorderedList = document.queryCommandState('insertUnorderedList');
 	items.insertorderedList = document.queryCommandState('insertOrderedList');
 
-	// for test
-	/*state = '';
-	for (var i in items) state += i + ': ' + items[i] + ', ';*/
-
-	// location.href = 'we-state://' + encodeURI(JSON.stringify(items));
+	location.href = 'we-state://' + encodeURI(JSON.stringify(items));
 };
 
 document.addEventListener('selectionchange', WE.selectionchange);   // 커서 이동 시 이벤트
