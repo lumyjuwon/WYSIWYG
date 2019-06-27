@@ -23,6 +23,7 @@ WE.selectionchange = function () {
 	items.justifyFull = document.queryCommandState('justifyFull');
 	items.insertunorderedList = document.queryCommandState('insertUnorderedList');
 	items.insertorderedList = document.queryCommandState('insertOrderedList');
+	items.lineHeight = getComputedStyle(getSelection().getRangeAt(0).startContainer.parentNode, 'line-height').getPropertyValue('line-height');
 
 	location.href = 'we-state://' + encodeURI(JSON.stringify(items));
 };
