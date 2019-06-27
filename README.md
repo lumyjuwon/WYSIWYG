@@ -4,7 +4,9 @@
 
 ***
 
-움짤 넣든지 동영상 넣든지
+Demo will be attached.
+
+
 
 
 
@@ -18,47 +20,51 @@ You can migrate your project to AndroidX. (How to migrate :  [Here](https://deve
 
 
 
+
+
 ### Functions
 
 ***
 
--[x] Text Size
+- [x] Text Size
 
--[x] Text Color
+- [x] Text Color
 
--[x] Text Background Color
+- [x] Text Background Color
 
--[x] Text Bold
+- [x] Text Bold
 
--[x] Text Italic
+- [x] Text Italic
 
--[x] Subscript
+- [x] Subscript
 
--[x] Superscript
+- [x] Superscript
 
--[x] Text Underline
+- [x] Text Underline
 
--[x] Text Strike Through
+- [x] Text Strike Through
 
--[x] Content Align (left, middle, right)
+- [x] Content Align (left, middle, right)
 
--[x] Insert Image
+- [x] Insert Image
 
--[x] Insert Youtube
+- [x] Insert Youtube
 
--[x] Undo
+- [x] Undo
 
--[x] Redo
+- [x] Redo
 
--[x] Indent
+- [x] Indent
 
--[x] Outdent
+- [x] Outdent
 
--[x] InsertOrderedList
+- [x] InsertOrderedList
 
--[x] InsertUnorderedList
+- [x] InsertUnorderedList
 
--[x] styleWithCSS
+- [x] styleWithCSS
+
+
 
 
 
@@ -81,6 +87,8 @@ implementation 'com.github.lumyjuwon:Android-Rich-Wysiwyg-Editor:1.0.0'
 ```
 
 And add this to your ``` module's``` build gradle.
+
+
 
 
 
@@ -133,11 +141,15 @@ Performs adding the css property to the dragged area.
 
 
 
+
+
 ### Requirements
 
 ***
 
 Android 5+
+
+
 
 
 
@@ -147,6 +159,8 @@ Android 5+
 
 * [RichEditor for Android](https://github.com/wasabeef/richeditor-android) by wasabeef
 * [ImagePicker]( https://github.com/esafirm/android-image-picker)
+
+
 
 
 
