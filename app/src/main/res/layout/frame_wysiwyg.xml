@@ -42,7 +42,7 @@
 
     <WebView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_weight="1">
     </WebView>
 
@@ -52,33 +52,6 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:text="Button" />
-
-
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_bgcolor"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:text="Button" />
-
-
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_strike"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="Button" />
-
-
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_img"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        />
-
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_video"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        />
 
 
 
@@ -99,6 +72,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_bold"
+            android:background="@color/colorBackground"
             android:src="@drawable/ic_color"
 
             />
@@ -111,6 +85,7 @@
             app:layout_constraintStart_toEndOf="@id/btn_color"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_italic"
+            android:background="@color/colorBackground"
             android:src="@drawable/ic_bold"/>
 
 
@@ -122,6 +97,7 @@
             app:layout_constraintStart_toEndOf="@+id/btn_bold"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_under"
+            android:background="@color/colorBackground"
             android:src="@drawable/ic_italic"/>
 
         <com.example.wysiwyg.EditorButton
@@ -132,6 +108,7 @@
             app:layout_constraintStart_toEndOf="@+id/btn_italic"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_align"
+            android:background="@color/colorBackground"
             android:src="@drawable/ic_under"/>
 
         <com.example.wysiwyg.EditorButton
@@ -142,6 +119,7 @@
             app:layout_constraintStart_toEndOf="@+id/btn_under"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_insert"
+            android:background="@color/colorBackground"
             android:src="@drawable/ic_left_align"/>
 
         <com.example.wysiwyg.EditorButton
@@ -152,6 +130,7 @@
             app:layout_constraintStart_toEndOf="@+id/btn_align"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_plus"
+            android:background="@color/colorBackground"
             android:src="@drawable/ic_insert"/>
 
 
@@ -163,6 +142,7 @@
             android:layout_marginEnd="2dp"
             app:layout_constraintStart_toEndOf="@+id/btn_insert"
             app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorBackground"
             app:layout_constraintEnd_toEndOf="parent"/>
 
 
