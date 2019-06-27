@@ -1,49 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorBackground"
     >
 
-    <Button
-        android:id="@+id/color_text_black"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:scaleType="fitCenter"
-        android:background="@drawable/color_panel"
-        android:layout_margin="10dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
 
-    <Button
-        android:id="@+id/color_text_white"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:scaleType="fitCenter"
-        android:background="@drawable/color_panel"
-        android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/color_text_black"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/color_text_white"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
 
-    <Button
-        android:id="@+id/color_text_red"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:scaleType="fitCenter"
-        android:background="@drawable/color_panel"
-        android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/color_text_white"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            android:background="@drawable/color_panel"
+            app:layout_constraintStart_toEndOf="@id/color_text_black"
+            app:layout_constraintEnd_toStartOf="@id/color_text_red"
+            android:layout_margin="10dp"/>
 
-    <Button
-        android:id="@+id/color_text_blue"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:scaleType="fitCenter"
-        android:background="@drawable/color_panel"
-        android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/color_text_red"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toEndOf="@id/color_text_white"
+            app:layout_constraintEnd_toStartOf="@id/color_text_blue"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
 
-    <Button
-        android:id="@+id/color_text_green"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:scaleType="fitCenter"
-        android:background="@drawable/color_panel"
-        android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/color_text_blue"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toEndOf="@id/color_text_red"
+            app:layout_constraintEnd_toStartOf="@id/color_text_green"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/color_text_green"
+            android:layout_width="@dimen/colorPanelSize"
+            android:layout_height="@dimen/colorPanelSize"
+            app:layout_constraintStart_toEndOf="@id/color_text_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/color_panel"
+            android:layout_margin="10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </LinearLayout>
