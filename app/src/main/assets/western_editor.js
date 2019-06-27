@@ -13,7 +13,7 @@ WE.selectionchange = function () {
 	items.bold = document.queryCommandState('bold');
 	items.underline = document.queryCommandState('underline');
 	items.italic = document.queryCommandState('italic');
-	items.strike = document.queryCommandState('strikeThrough');
+	items.strikeThrough = document.queryCommandState('strikeThrough');
 	items.superscript = document.queryCommandState('superscript');
 	items.subscript = document.queryCommandState('subscript');
 	items.foreColor = document.queryCommandValue('foreColor');
@@ -22,8 +22,8 @@ WE.selectionchange = function () {
 	items.justifyCenter = document.queryCommandState('justifyCenter');
 	items.justifyRight = document.queryCommandState('justifyRight');
 	items.justifyFull = document.queryCommandState('justifyFull');
-	items.unorderedList = document.queryCommandState('insertUnorderedList');
-	items.orderedList = document.queryCommandState('insertOrderedList');
+	items.insertunorderedList = document.queryCommandState('insertUnorderedList');
+	items.insertorderedList = document.queryCommandState('insertOrderedList');
 
 	// location.href = 'we-state://' + encodeURI(JSON.stringify(items));
 
