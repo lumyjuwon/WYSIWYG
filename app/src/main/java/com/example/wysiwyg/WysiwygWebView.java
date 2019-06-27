@@ -9,7 +9,7 @@ public class WysiwygWebView extends WebViewClient {
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request){
 
-        
+        System.out.println("request " + request);
 
         return true;
     }

@@ -6,9 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.example.wysiwyg.WysiwygEditor
-        android:id="@+id/editor"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></com.example.wysiwyg.WysiwygEditor>
 
+
+    <!--<com.example.wysiwyg.WysiwygEditor-->
+        <!--android:id="@+id/editor"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"></com.example.wysiwyg.WysiwygEditor>-->
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
