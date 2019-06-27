@@ -1,7 +1,6 @@
 package com.example.wysiwyg;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatImageButton;
@@ -12,8 +11,6 @@ public class EditorButton extends AppCompatImageButton {
         void onReceiveClickedListener();
     }
 
-    private ClickedListener mClickedListener;
-    private static OnClickListener mOnClickListener;
     private static int CheckedColorFilter;
     private static int UnCheckedColorFilter;
     private boolean isChecked = false;
@@ -26,20 +23,12 @@ public class EditorButton extends AppCompatImageButton {
         super(context ,attrs);
     }
 
-    public static void setGlobalOnClickListener(OnClickListener onClickListener){
-        mOnClickListener = onClickListener;
-    }
-
     public static void setGlobalUnCheckedColorFilter(int color){
         UnCheckedColorFilter = color;
     }
 
     public static void setGlobalCheckedColorFilter(int color){
         CheckedColorFilter = color;
-    }
-
-    public static OnClickListener getOnClickListener(){
-        return mOnClickListener;
     }
 
     public static int getCheckedColorFilter(){
@@ -50,12 +39,15 @@ public class EditorButton extends AppCompatImageButton {
         return UnCheckedColorFilter;
     }
 
-    public void changeClicked(){
-        if(isChecked)
-            isChecked = false;
+    public boolean getChecked(){
+        return this.isChecked;
+    }
+
+    public void toggleClicked(){
+        if(this.isChecked)
+            this.isChecked = false;
         else
-            isChecked = true;
-        System.out.println(isChecked);
+            this.isChecked = true;
     }
 
     public void changeColorFilter(){
@@ -63,10 +55,6 @@ public class EditorButton extends AppCompatImageButton {
             this.setColorFilter(R.color.colorPrimary);
         else
             this.setColorFilter(R.color.colorBackYellow);
-    }
-
-    public void setOnClickedListener(EditorButton.ClickedListener listener){
-        this.mClickedListener = listener;
     }
 
 }
