@@ -15,7 +15,11 @@
     <color name="colorBackRed">#F96E90</color>
     <color name="colorBackGray">#9B9B9B</color>
 
-    <color name="colorDivider">#494949</color>
+
+    <color name="colorText">#A09F9F</color>
+
+    <color name="colorDivider">#A09F9F</color>
+
 
 
 

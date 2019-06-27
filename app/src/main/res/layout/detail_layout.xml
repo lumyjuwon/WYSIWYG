@@ -40,7 +40,7 @@
             android:src="@drawable/ic_italic"
             />
 
-        <com.example.wysiwyg.EditorButton
+         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_bold_underline_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
@@ -148,6 +148,16 @@
             android:layout_marginEnd="5dp"
             android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_size_down"/>
+
+        <TextView
+            android:id="@+id/view_textsize"
+            android:layout_width="@dimen/spacingWidth"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/arial"
+            android:gravity="center"
+            android:textSize="@dimen/lineSpacing"
+            android:text="1"/>
+
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_sizeDown_normal"
             android:layout_width="@dimen/buttonSize"
@@ -295,6 +305,7 @@
             android:src="@drawable/ic_size_down"/>
 
         <TextView
+            android:id="@+id/view_spacing"
             android:layout_width="@dimen/spacingWidth"
             android:layout_height="match_parent"
             android:fontFamily="@font/arial"
@@ -311,6 +322,8 @@
             android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_size_up"
             />
+
+
     </LinearLayout>
 
 
