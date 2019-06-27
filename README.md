@@ -6,9 +6,9 @@
 
 Demo will be attached.
 
+<br/>
 
-
-
+<br/>
 
 ### AndroidX
 
@@ -18,9 +18,9 @@ This editor uses AndroidX.
 
 You can migrate your project to AndroidX. (How to migrate :  [Here](https://developer.android.com/jetpack/androidx/migrate) )
 
+<br/>
 
-
-
+<br/>
 
 ### Functions
 
@@ -64,9 +64,7 @@ You can migrate your project to AndroidX. (How to migrate :  [Here](https://deve
 
 - [x] styleWithCSS
 
-
-
-
+<br/><br/>
 
 ### Setup
 
@@ -88,9 +86,7 @@ implementation 'com.github.lumyjuwon:Android-Rich-Wysiwyg-Editor:1.0.0'
 
 And add this to your ``` module's``` build gradle.
 
-
-
-
+<br/><br/>
 
 ### Methods
 
@@ -110,7 +106,7 @@ WE.exec = function(cmd, val) { //
 
 Performs execCommand basic methods. You can add more funtions. ( [한국어](https://developer.mozilla.org/ko/docs/Web/API/Document/execCommand) , [ENG](https://developer.mozilla.org/en/docs/Web/API/Document/execCommand) )
 
-
+<br/>
 
 ```javascript
 WE.insertCss = function (property, value) {	
@@ -139,9 +135,7 @@ WE.insertCss = function (property, value) {
 
 Performs adding the css property to the dragged area.
 
-
-
-
+<br/><br/>
 
 ### Requirements
 
@@ -149,9 +143,7 @@ Performs adding the css property to the dragged area.
 
 Android 5+
 
-
-
-
+<br/><br/>
 
 ### Credits
 
@@ -160,9 +152,7 @@ Android 5+
 * [RichEditor for Android](https://github.com/wasabeef/richeditor-android) by wasabeef
 * [ImagePicker]( https://github.com/esafirm/android-image-picker)
 
-
-
-
+<br/><br/>
 
 ### License
 
