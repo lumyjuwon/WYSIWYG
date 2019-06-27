@@ -5,10 +5,13 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import java.util.HashMap;
+
 public class WysiwygWebView extends WebViewClient{
+    private HashMap<String, Integer> stateMap = new HashMap<String, Integer>();
 
     public interface StateEventListener{
-        void onReceivedEvent(String state);
+        void onReceivedEvent(HashMap<String, Integer> map);
     }
 
     private StateEventListener stateEventListener;
@@ -20,10 +23,14 @@ public class WysiwygWebView extends WebViewClient{
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request){
         JsonDecoder jsonDecoder = JsonDecoder.decode(request.getUrl().toString());
+        for(EvalCommand cmd : EvalCommand.values()){
+            stateMap.put()
+        }
 
         try {
             // Convert Object type to String
-            stateEventListener.onReceivedEvent(jsonDecoder.get(EvalCommand.BOLD.toString()));
+            // stateEventListener.onReceivedEvent(jsonDecoder.getValue(EvalCommand.BOLD.toString()));
+
         }
         catch(Exception e){
             Log.d("JsonDecoder", e.toString());

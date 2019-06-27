@@ -26,7 +26,7 @@ public class JsonDecoder {
         return jsonDecoder;
     }
 
-    public String get(String key){
+    public Integer getValue(String key){
         try {
             // Convert Object type to String
             items = new JSONObject(mJson);
@@ -37,5 +37,7 @@ public class JsonDecoder {
             return null;
         }
     }
+
+    public Integer get
 
 }
