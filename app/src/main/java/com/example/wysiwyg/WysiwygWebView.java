@@ -5,7 +5,17 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class WysiwygWebView extends WebViewClient {
+public class WysiwygWebView extends WebViewClient{
+
+    public interface StateEventListener{
+        void onReceivedEvent(String state);
+    }
+
+    private StateEventListener stateEventListener;
+
+    public void setStateEventListener(StateEventListener listener){
+        stateEventListener = listener;
+    }
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request){
@@ -13,7 +23,7 @@ public class WysiwygWebView extends WebViewClient {
 
         try {
             // Convert Object type to String
-            System.out.println(jsonDecoder.get(EvalCommand.BOLD.toString()));
+            stateEventListener.onReceivedEvent(jsonDecoder.get(EvalCommand.BOLD.toString()));
         }
         catch(Exception e){
             Log.d("JsonDecoder", e.toString());
