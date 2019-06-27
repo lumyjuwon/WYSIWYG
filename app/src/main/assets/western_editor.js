@@ -25,8 +25,6 @@ WE.selectionchange = function () {
 	items.insertorderedList = document.queryCommandState('insertOrderedList');
 	items.lineHeight = getComputedStyle(getSelection().getRangeAt(0).startContainer.parentNode, 'line-height').getPropertyValue('line-height');
 
-	//if(items.bold) alert(encodeURI(JSON.stringify(items)));
-
 	location.href = 'we-state://' + encodeURI(JSON.stringify(items));
 };
 
@@ -36,6 +34,7 @@ WE.exec = function (cmd, val) { // execCommand로 동작하는 기능 처리
 	val = (typeof(val) !== 'undefined') ? val : null;
 	document.execCommand("styleWithCSS", null, (val !== null));
 	document.execCommand(cmd, false, val);
+	WE.editor.blur();
 	WE.editor.focus();
 };
 
@@ -62,6 +61,7 @@ WE.insertCss = function (property, value) {	// 블록 지정한 영역에 css �
 		document.execCommand('foreColor', false, 'rgb(1, 1, 1)');	// 이러면 font 태그가 붙음
 		WE.editor.innerHTML = WE.editor.innerHTML.replace(/<font .+?>(.*?)<\/font>/g, '<span style="' + property + ': ' + value + '">$1</span>');	// font를 span로 바꿔치기...
 	}
+	WE.editor.blur();
 	WE.editor.focus();
 };
 
