@@ -13,8 +13,8 @@ public enum EvalCommand{
     BACKCOLOR("backColor"),
     JUSTIFYLEFT("justifyLeft"),
     JUSTIFYCENTER("justifyCenter"),
-    JUSTIFYRIGHT("justifyRight");
-    INSERTUNORDEREDLIST("insertUnorderedList");
+    JUSTIFYRIGHT("justifyRight"),
+    INSERTUNORDEREDLIST("insertUnorderedList"),
     INSERTORDEREDLIST("insertOrderedList");
     
     private final String cmd;
