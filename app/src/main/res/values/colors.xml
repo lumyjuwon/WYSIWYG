@@ -3,12 +3,17 @@
     <color name="colorPrimary">#ED4F6A</color>
     <color name="colorPrimaryDark">#D6133D</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorIconDefault">#A09F9F</color>
+
+
     <color name="colorBackground">#ffffff</color>
     <color name="colorTextBlack">#000000</color>
     <color name="colorTextWhite">#ffffff</color>
     <color name="colorTextRed">#EA2621</color>
     <color name="colorTextBlue">#2525BA</color>
     <color name="colorTextGreen">#19882A</color>
+
+
     <color name="colorBackYellow">#FCC047</color>
     <color name="colorBackGreen">#97D86C</color>
     <color name="colorBackBlue">#709EFC</color>
@@ -17,7 +22,6 @@
 
 
     <color name="colorText">#A09F9F</color>
-
     <color name="colorDivider">#A09F9F</color>
 
 
