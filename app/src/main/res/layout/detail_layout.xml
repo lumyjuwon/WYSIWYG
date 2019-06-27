@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:divider="@drawable/divider"
     android:dividerPadding="10dp"
-    android:showDividers="middle"
+    android:orientation="vertical"
     android:paddingTop="@dimen/detailTopDownPadding"
-    android:paddingBottom="@dimen/detailTopDownPadding">
+    android:paddingBottom="@dimen/detailTopDownPadding"
+    android:showDividers="middle">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/detailDividerMargin"
         android:layout_marginEnd="@dimen/detailDividerMargin"
-        >
+        android:orientation="horizontal">
 
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_bold_detail"
@@ -37,18 +36,16 @@
             android:layout_marginStart="@dimen/buttonMargin"
             android:layout_marginEnd="@dimen/buttonMargin"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_italic"
-            />
+            android:src="@drawable/ic_italic" />
 
-         <com.example.wysiwyg.EditorButton
+        <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_bold_underline_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="@dimen/buttonMargin"
             android:layout_marginEnd="@dimen/buttonMargin"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_under"
-            />
+            android:src="@drawable/ic_under" />
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_bold_strike_detail"
@@ -56,14 +53,12 @@
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="@dimen/buttonMargin"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_strike"
-            />
+            android:src="@drawable/ic_strike" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1" />
 
 
     </LinearLayout>
@@ -82,7 +77,7 @@
             android:layout_weight="1" />
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_alignLeft_normal"
+            android:id="@+id/btn_alignLeft_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginEnd="@dimen/buttonMargin"
@@ -90,7 +85,7 @@
             android:src="@drawable/ic_left_align" />
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_bold_alignCenter_normal"
+            android:id="@+id/btn_bold_alignCenter_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="@dimen/buttonMargin"
@@ -100,7 +95,7 @@
 
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_bold_alignRight_normal"
+            android:id="@+id/btn_bold_alignRight_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="@dimen/buttonMargin"
@@ -110,7 +105,7 @@
 
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_img"
+            android:id="@+id/btn_img_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="@dimen/buttonMarginBetweenCategory"
@@ -120,7 +115,7 @@
 
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_video"
+            android:id="@+id/btn_youtube_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="@dimen/buttonMargin"
@@ -137,42 +132,42 @@
 
 
     <View
-        android:layout_marginStart="@dimen/dividerPadding"
-        android:layout_marginEnd="@dimen/dividerPadding"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@android:color/darker_gray"/>
-    
-    
+        android:layout_marginStart="@dimen/dividerPadding"
+        android:layout_marginEnd="@dimen/dividerPadding"
+        android:background="@android:color/darker_gray" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/sideLinePadding"
-        android:paddingEnd="@dimen/sideLinePadding"
         android:layout_marginTop="@dimen/detailTopDownPadding"
-        android:layout_marginEnd="@dimen/detailDividerMargin">
+        android:layout_marginEnd="@dimen/detailDividerMargin"
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding">
 
         <TextView
-            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/detailTextSize"
             android:layout_gravity="center_vertical"
+            android:fontFamily="@font/arial"
+            android:padding="10dp"
             android:text="Text Size"
-            android:fontFamily="@font/arial"/>
+            android:textSize="@dimen/detailTextSize" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_sizeUp_normal"
+            android:id="@+id/btn_sizeUp_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginEnd="5dp"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_size_down"/>
+            android:src="@drawable/ic_size_down" />
 
         <TextView
             android:id="@+id/view_textsize"
@@ -180,38 +175,39 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/arial"
             android:gravity="center"
-            android:textSize="@dimen/lineSpacing"
-            android:text="1"/>
+            android:text="1"
+            android:textSize="@dimen/lineSpacing" />
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_sizeDown_normal"
+            android:id="@+id/btn_sizeDown_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="5dp"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_size_up"/>
+            android:src="@drawable/ic_size_up" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/sideLinePadding"
-        android:paddingEnd="@dimen/sideLinePadding"
         android:layout_marginTop="@dimen/detailDividerMargin"
-        android:layout_marginEnd="@dimen/detailDividerMargin">
+        android:layout_marginEnd="@dimen/detailDividerMargin"
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding">
 
         <TextView
-            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/detailTextSize"
             android:layout_gravity="center_vertical"
+            android:fontFamily="@font/arial"
+            android:padding="10dp"
             android:text="Text Color"
-            android:fontFamily="@font/arial"/>
+            android:textSize="@dimen/detailTextSize" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
 
         <com.example.wysiwyg.EditorButton
@@ -219,30 +215,31 @@
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_color_panel"
-            android:padding="@dimen/colorPanelPadding"/>
+            android:padding="@dimen/colorPanelPadding"
+            android:src="@drawable/ic_color_panel" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/sideLinePadding"
-        android:paddingEnd="@dimen/sideLinePadding"
         android:layout_marginTop="@dimen/detailDividerMargin"
-        android:layout_marginEnd="@dimen/detailDividerMargin">
+        android:layout_marginEnd="@dimen/detailDividerMargin"
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding">
 
         <TextView
-            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/detailTextSize"
             android:layout_gravity="center_vertical"
+            android:fontFamily="@font/arial"
+            android:padding="10dp"
             android:text="Highlight Color"
-            android:fontFamily="@font/arial"/>
+            android:textSize="@dimen/detailTextSize" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
 
         <com.example.wysiwyg.EditorButton
@@ -250,33 +247,32 @@
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/color_panel_none"
-            android:padding="@dimen/colorPanelPadding"/>
+            android:padding="@dimen/colorPanelPadding"
+            android:src="@drawable/color_panel_none" />
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/sideLinePadding"
-        android:paddingEnd="@dimen/sideLinePadding"
         android:layout_marginTop="@dimen/detailDividerMargin"
         android:layout_marginEnd="@dimen/detailDividerMargin"
-        >
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding">
 
         <TextView
-            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/detailTextSize"
             android:layout_gravity="center_vertical"
+            android:fontFamily="@font/arial"
+            android:padding="10dp"
             android:text="Indentation"
-            android:fontFamily="@font/arial"/>
+            android:textSize="@dimen/detailTextSize" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_indentation_in"
@@ -284,7 +280,7 @@
             android:layout_height="@dimen/buttonSize"
             android:layout_marginEnd="5dp"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_indentation_in"/>
+            android:src="@drawable/ic_indentation_in" />
 
 
         <com.example.wysiwyg.EditorButton
@@ -293,83 +289,79 @@
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="5dp"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_indentation_out"
-            />
+            android:src="@drawable/ic_indentation_out" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/sideLinePadding"
-        android:paddingEnd="@dimen/sideLinePadding"
         android:layout_marginTop="@dimen/detailDividerMargin"
         android:layout_marginEnd="@dimen/detailDividerMargin"
-        >
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding">
 
         <TextView
-            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/detailTextSize"
             android:layout_gravity="center_vertical"
+            android:fontFamily="@font/arial"
+            android:padding="10dp"
             android:text="List Type"
-            android:fontFamily="@font/arial"/>
+            android:textSize="@dimen/detailTextSize" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_unordered"
+            android:id="@+id/btn_unordered_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginEnd="5dp"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_unordered"/>
+            android:src="@drawable/ic_unordered" />
 
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_orderd"
+            android:id="@+id/btn_ordered_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="5dp"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_ordered"
-            />
+            android:src="@drawable/ic_ordered" />
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/sideLinePadding"
-        android:paddingEnd="@dimen/sideLinePadding"
         android:layout_marginTop="@dimen/detailDividerMargin"
         android:layout_marginEnd="@dimen/detailDividerMargin"
-        >
+        android:paddingStart="@dimen/sideLinePadding"
+        android:paddingEnd="@dimen/sideLinePadding">
 
         <TextView
-            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/detailTextSize"
             android:layout_gravity="center_vertical"
+            android:fontFamily="@font/arial"
+            android:padding="10dp"
             android:text="Line Spacing"
-            android:fontFamily="@font/arial"/>
+            android:textSize="@dimen/detailTextSize" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_spacing_down"
+            android:id="@+id/btn_spacing_down_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginEnd="5dp"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_size_down"/>
+            android:src="@drawable/ic_size_down" />
 
         <TextView
             android:id="@+id/view_spacing"
@@ -377,23 +369,20 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/arial"
             android:gravity="center"
-            android:textSize="@dimen/lineSpacing"
-            android:text="1"/>
+            android:text="1"
+            android:textSize="@dimen/lineSpacing" />
 
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_spacing_up"
+            android:id="@+id/btn_spacing_up_detail"
             android:layout_width="@dimen/buttonSize"
             android:layout_height="@dimen/buttonSize"
             android:layout_marginStart="5dp"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_size_up"
-            />
+            android:src="@drawable/ic_size_up" />
 
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>

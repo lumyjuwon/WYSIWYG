@@ -59,15 +59,19 @@
         android:background="@android:color/darker_gray"/>
 
 
-
-
-
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
     </WebView>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
 
 
     <com.example.wysiwyg.EditorButton
