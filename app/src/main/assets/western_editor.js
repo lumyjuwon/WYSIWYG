@@ -23,6 +23,7 @@ WE.selectionchange = function () {
 	items.justifyFull = document.queryCommandState('justifyFull');
 	items.insertunorderedList = document.queryCommandState('insertUnorderedList');
 	items.insertorderedList = document.queryCommandState('insertOrderedList');
+	items.lineHeight = getComputedStyle(getSelection().getRangeAt(0).startContainer.parentNode, 'line-height').getPropertyValue('line-height');
 
 	location.href = 'we-state://' + encodeURI(JSON.stringify(items));
 };
@@ -59,6 +60,26 @@ WE.insertCss = function (property, value) {	// 블록 지정한 영역에 css �
 	WE.editor.focus();
 };
 
+WE.lineHeight = function (height) {
+	let tag = getSelection().getRangeAt(0).startContainer;
+	while (tag.tagName != 'DIV') {	// 해당 줄 선택
+		tag = tag.parentNode;
+	}
+	if (tag.id == 'editor') {	// 만약 텍스트가 div로 안 묶여있다면
+		let childs = tag.childNodes;
+		for (let i = 0; i < childs.length; i++) {
+			if (childs[i].nodeType == 3) {
+				let node = document.createElement('div');
+				WE.editor.insertBefore(node, childs[i]);
+				node.appendChild(childs[i + 1]);
+			}
+		}
+		tag = tag.childNodes[0];
+	}
+	WE.selectElement(tag.childNodes[0]);
+	WE.insertCss('line-height', height);
+};
+
 WE.rgb2rgba = function (rgba) { // rgb를 rgba로 변환
 	if (rgba.substring(0, 4) == 'rgb(') {
 		rgba = rgba.replace('rgb', 'rgba').replace(')', ', 1)');
@@ -70,6 +91,13 @@ WE.submit = function () {
 	location.href = 'we-callback://' + encodeURI(wE.editor.innerHTML);
 };
 
+WE.selectElement = function (el) {	// 특정 엘리먼트 선택
+	let range = document.createRange();
+	range.selectNodeContents(el);
+	let sel = getSelection();
+	sel.removeAllRanges();
+	sel.addRange(range);
+}
 
 //Input area settings, not tested 
 WE.setPlaceholder = function(placeholder) {
