@@ -16,7 +16,7 @@
             android:id="@+id/edt_headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@null"
+            android:background="?attr/actionBarItemBackground"
             android:layout_weight="1"
             android:textSize="35sp"/>
 
@@ -24,7 +24,7 @@
             android:id="@+id/btn_cfrm"
             android:layout_width="65dp"
             android:layout_height="match_parent"
-            android:background="@color/colorBackground"
+            android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_cfrm"
             android:tint="@color/colorPrimaryDark"
             android:text="con" />
@@ -68,7 +68,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_bold"
-            android:background="@color/colorBackground"
+            android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_color"
 
             />
@@ -81,7 +81,7 @@
             app:layout_constraintStart_toEndOf="@id/btn_color"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_italic"
-            android:background="@color/colorBackground"
+            android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_bold"/>
 
 
@@ -93,7 +93,7 @@
             app:layout_constraintStart_toEndOf="@+id/btn_bold"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_under"
-            android:background="@color/colorBackground"
+            android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_italic"/>
 
         <com.example.wysiwyg.EditorButton
@@ -104,7 +104,7 @@
             app:layout_constraintStart_toEndOf="@+id/btn_italic"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_align"
-            android:background="@color/colorBackground"
+            android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_under"/>
 
         <com.example.wysiwyg.EditorButton
@@ -115,7 +115,7 @@
             app:layout_constraintStart_toEndOf="@+id/btn_under"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_insert"
-            android:background="@color/colorBackground"
+            android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_left_align"/>
 
         <com.example.wysiwyg.EditorButton
@@ -126,7 +126,7 @@
             app:layout_constraintStart_toEndOf="@+id/btn_align"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btn_detail"
-            android:background="@color/colorBackground"
+            android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_insert"/>
 
 
@@ -139,7 +139,7 @@
             app:layout_constraintStart_toEndOf="@+id/btn_insert"
             app:layout_constraintTop_toTopOf="parent"
             android:src="@drawable/ic_detail"
-            android:background="@color/colorBackground"
+            android:background="?attr/actionBarItemBackground"
             app:layout_constraintEnd_toEndOf="parent"/>
 
 

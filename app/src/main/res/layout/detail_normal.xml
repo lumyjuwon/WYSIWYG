@@ -15,35 +15,49 @@
             android:layout_weight="1"/>
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_bold_normal"
+            android:id="@+id/btn_bold_detail"
             android:layout_width="54dp"
             android:layout_height="54dp"
-            android:layout_marginEnd="2dp"/>
+            android:layout_marginEnd="2dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_bold"
+            />
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_bold_italic_normal"
+            android:id="@+id/btn_bold_italic_detail"
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"/>
+            android:layout_marginEnd="2dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_italic"
+            />
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_bold_underline_normal"
+            android:id="@+id/btn_bold_underline_detail"
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"/>
+            android:layout_marginEnd="2dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_under"
+            />
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_bold_strike_normal"
+            android:id="@+id/btn_bold_strike_detail"
             android:layout_width="54dp"
             android:layout_height="54dp"
-            android:layout_marginStart="2dp"/>
+            android:layout_marginStart="2dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_strike"
+            />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/colorBackground"
+            />
 
 
     </LinearLayout>
@@ -62,21 +76,27 @@
             android:id="@+id/btn_alignLeft_normal"
             android:layout_width="54dp"
             android:layout_height="54dp"
-            android:layout_marginEnd="2dp"/>
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_left_align"
+            android:background="?attr/actionBarItemBackground"/>
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_bold_alignCenter_normal"
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"/>
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_center_align"
+            android:background="?attr/actionBarItemBackground"/>
 
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_bold_alignRight_normal"
             android:layout_width="54dp"
             android:layout_height="54dp"
-            android:layout_marginStart="2dp"/>
+            android:layout_marginStart="2dp"
+            android:src="@drawable/ic_right_align"
+            android:background="?attr/actionBarItemBackground"/>
 
         <View
             android:layout_width="match_parent"
@@ -98,21 +118,25 @@
             android:textSize="23sp"
             android:text="Text Size"/>
         <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_weight="1"/>
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_sizeUp_normal"
             android:layout_width="54dp"
             android:layout_height="54dp"
-            android:layout_marginEnd="5dp"/>
+            android:layout_marginEnd="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_size_down"/>
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_sizeDown_normal"
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:layout_marginStart="5dp"
-            android:layout_marginEnd="15dp"/>
+            android:layout_marginEnd="15dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_size_up"/>
     </LinearLayout>
 
     <LinearLayout
@@ -127,17 +151,20 @@
             android:textSize="23sp"
             android:text="Text Color"/>
         <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_weight="1"/>
 
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_color_normal"
+            android:id="@+id/btn_color_detail"
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:layout_marginStart="5dp"
-            android:layout_marginEnd="15dp"/>
+            android:layout_marginEnd="15dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/color_panel_view"
+            android:padding="@dimen/colorPanelPadding"/>
     </LinearLayout>
 
     <LinearLayout
@@ -152,23 +179,27 @@
             android:textSize="23sp"
             android:text="Highlight Color"/>
         <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_weight="1"/>
 
 
         <com.example.wysiwyg.EditorButton
-            android:id="@+id/btn_bgcolor_normal"
+            android:id="@+id/btn_bgcolor_detail"
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:layout_marginStart="5dp"
-            android:layout_marginEnd="15dp"/>
+            android:layout_marginEnd="15dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/color_panel_view"
+            android:padding="@dimen/colorPanelPadding"/>
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <TextView
             android:padding="10dp"
@@ -176,23 +207,30 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:textSize="23sp"
-            android:text="Intendation"/>
+            android:text="Indentation"/>
         <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_weight="1"/>
 
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_indentation_in"
             android:layout_width="54dp"
             android:layout_height="54dp"
-            android:layout_marginEnd="5dp"/>
+            android:layout_marginEnd="5dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_indentation_in"/>
+
+
         <com.example.wysiwyg.EditorButton
             android:id="@+id/btn_indentation_out"
             android:layout_width="54dp"
             android:layout_height="54dp"
             android:layout_marginStart="5dp"
-            android:layout_marginEnd="15dp"/>
+            android:layout_marginEnd="15dp"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_indentation_out"
+            />
     </LinearLayout>
 
 
