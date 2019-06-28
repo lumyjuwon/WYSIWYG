@@ -1,4 +1,4 @@
-<vector android:height="50dp" android:viewportHeight="54"
-    android:viewportWidth="54" android:width="50dp" xmlns:android="http://schemas.android.com/apk/res/android">
+<vector android:height="45dp" android:viewportHeight="54"
+    android:viewportWidth="54" android:width="45dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#A09F9F" android:pathData="M27.45,39c-3.75,0 -7.49,0 -11.24,0c-1.44,0 -2.55,-0.84 -2.87,-2.19c-0.05,-0.21 -0.08,-0.44 -0.08,-0.66c0,-5.66 0,-11.32 0,-16.98c0,-1.4 0.94,-2.55 2.31,-2.83c0.22,-0.04 0.46,-0.05 0.69,-0.05c7.46,0 14.93,0 22.39,0c1.54,0 2.68,0.91 2.96,2.36c0.02,0.1 0.02,0.21 0.02,0.31c0,5.8 0,11.59 0,17.39c0,1.24 -1.13,2.49 -2.37,2.61C39,38.98 38.73,39 38.46,39C34.79,39 31.12,39 27.45,39zM24.68,27.69c-2.84,2.84 -5.66,5.66 -8.46,8.46c7.48,0 15.01,0 22.52,0c-2.35,-2.35 -4.69,-4.69 -7.06,-7.06c-0.92,0.92 -1.86,1.86 -2.8,2.81C27.46,30.47 26.05,29.06 24.68,27.69zM37.39,23.39c0,-1.57 -1.27,-2.85 -2.84,-2.84c-1.57,0.01 -2.82,1.26 -2.83,2.82c-0.01,1.58 1.25,2.84 2.83,2.85C36.12,26.23 37.39,24.96 37.39,23.39z"/>
 </vector>
