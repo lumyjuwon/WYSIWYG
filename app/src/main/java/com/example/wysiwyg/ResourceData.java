@@ -18,6 +18,7 @@ public enum ResourceData {
     private ResourceData(String resource){
         this.resource = resource;
     }
+
     @Override
     public String toString(){
         return this.resource;

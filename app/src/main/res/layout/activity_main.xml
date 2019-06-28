@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--<WebView-->
-        <!--android:id="@+id/webview"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_weight="1">-->
-    <!--</WebView>-->
-
     <com.example.wysiwyg.WysiwygEditor
         android:id="@+id/editor"
         android:layout_width="match_parent"

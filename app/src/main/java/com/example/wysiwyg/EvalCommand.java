@@ -15,7 +15,8 @@ public enum EvalCommand{
     JUSTIFYCENTER("justifyCenter"),
     JUSTIFYRIGHT("justifyRight"),
     INSERTUNORDEREDLIST("insertUnorderedList"),
-    INSERTORDEREDLIST("insertOrderedList");
+    INSERTORDEREDLIST("insertOrderedList"),
+    INSERTYOUTUBE("insertYoutube");
     
     private final String cmd;
 
