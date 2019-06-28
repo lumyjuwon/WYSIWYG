@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">WYSIWYG</string>
+    <string name="stringHeadline">headline</string>
+    <string name="text_size">Text Size</string>
+    <string name="text_color">Text Color</string>
+    <string name="indentation">Indentation</string>
+    <string name="list_type">List Type</string>
+    <string name="line_spacing">Line Spacing</string>
+    <string name="highlight_color">Highlight Color</string>
+    <string name="_1">1</string>
+    <string name="url_instruction">Type the url of youtube video</string>
 </resources>

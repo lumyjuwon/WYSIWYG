@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp">
+        >
 
         <Button
             android:id="@+id/color_text_black"
@@ -17,6 +17,9 @@
             android:layout_height="@dimen/colorPanelSize"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/color_text_white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
             android:background="@drawable/color_panel"
             android:backgroundTint="@color/colorTextBlack"
             android:layout_margin="10dp"/>
@@ -28,6 +31,10 @@
             android:background="@drawable/color_panel_white"
             app:layout_constraintStart_toEndOf="@id/color_text_black"
             app:layout_constraintEnd_toStartOf="@id/color_text_red"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+
             android:layout_margin="10dp"/>
 
         <Button
@@ -36,6 +43,9 @@
             android:layout_height="@dimen/colorPanelSize"
             app:layout_constraintStart_toEndOf="@id/color_text_white"
             app:layout_constraintEnd_toStartOf="@id/color_text_blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
             android:background="@drawable/color_panel"
             android:backgroundTint="@color/colorTextRed"
             android:layout_margin="10dp"/>
@@ -46,6 +56,9 @@
             android:layout_height="@dimen/colorPanelSize"
             app:layout_constraintStart_toEndOf="@id/color_text_red"
             app:layout_constraintEnd_toStartOf="@id/color_text_green"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
             android:background="@drawable/color_panel"
             android:backgroundTint="@color/colorTextBlue"
             android:layout_margin="10dp"/>
@@ -56,6 +69,9 @@
             android:layout_height="@dimen/colorPanelSize"
             app:layout_constraintStart_toEndOf="@id/color_text_blue"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
             android:background="@drawable/color_panel"
             android:backgroundTint="@color/colorTextGreen"
             android:layout_margin="10dp"/>

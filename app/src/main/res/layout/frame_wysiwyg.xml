@@ -14,30 +14,48 @@
         android:paddingEnd="@dimen/sideLinePadding"
         >
         <HorizontalScrollView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="@dimen/sideLinePadding"
             >
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edt_headline"
+                android:inputType="textFilter"
+                android:hint="@string/stringHeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/arial"
+                android:textSize="@dimen/titleFontSize"/>
 
-                <EditText
-                    android:id="@+id/edt_headline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:layout_gravity="center_vertical"
-                    android:fontFamily="@font/arial"
-                    android:textSize="@dimen/titleFontSize"
-                    />
-            </LinearLayout>
 
 
         </HorizontalScrollView>
+
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_undo"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_undo"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone" />
+
+        <com.example.wysiwyg.EditorButton
+            android:id="@+id/btn_redo"
+            android:layout_width="@dimen/buttonSize"
+            android:layout_height="@dimen/buttonSize"
+            android:background="?attr/actionBarItemBackground"
+            android:src="@drawable/ic_redo"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            />
 
 
 
@@ -48,7 +66,7 @@
             android:background="?attr/actionBarItemBackground"
             android:src="@drawable/ic_cfrm"
             android:tint="@color/colorPrimaryDark"
-            android:text="con" />
+             />
 
     </LinearLayout>
 
@@ -74,11 +92,7 @@
     </FrameLayout>
 
 
-    <com.example.wysiwyg.EditorButton
-        android:id="@+id/btn_size"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:text="Button" />
+
 
     <LinearLayout
         android:layout_width="match_parent"

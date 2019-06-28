@@ -163,7 +163,7 @@
                     android:layout_gravity="center_vertical"
                     android:fontFamily="@font/arial"
                     android:padding="10dp"
-                    android:text="Text Size"
+                    android:text="@string/text_size"
                     android:textSize="@dimen/detailTextSize" />
 
                 <View
@@ -185,7 +185,7 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/arial"
                     android:gravity="center"
-                    android:text="1"
+                    android:text="@string/_1"
                     android:textSize="@dimen/lineSpacing" />
 
                 <com.example.wysiwyg.EditorButton
@@ -211,7 +211,7 @@
                     android:layout_gravity="center_vertical"
                     android:fontFamily="@font/arial"
                     android:padding="10dp"
-                    android:text="Text Color"
+                    android:text="@string/text_color"
                     android:textSize="@dimen/detailTextSize" />
 
                 <View
@@ -243,7 +243,7 @@
                     android:layout_gravity="center_vertical"
                     android:fontFamily="@font/arial"
                     android:padding="10dp"
-                    android:text="Highlight Color"
+                    android:text="@string/highlight_color"
                     android:textSize="@dimen/detailTextSize" />
 
                 <View
@@ -276,7 +276,7 @@
                     android:layout_gravity="center_vertical"
                     android:fontFamily="@font/arial"
                     android:padding="10dp"
-                    android:text="Indentation"
+                    android:text="@string/indentation"
                     android:textSize="@dimen/detailTextSize" />
 
                 <View
@@ -316,7 +316,7 @@
                     android:layout_gravity="center_vertical"
                     android:fontFamily="@font/arial"
                     android:padding="10dp"
-                    android:text="List Type"
+                    android:text="@string/list_type"
                     android:textSize="@dimen/detailTextSize" />
 
                 <View
@@ -357,7 +357,7 @@
                     android:layout_gravity="center_vertical"
                     android:fontFamily="@font/arial"
                     android:padding="10dp"
-                    android:text="Line Spacing"
+                    android:text="@string/line_spacing"
                     android:textSize="@dimen/detailTextSize" />
 
                 <View
@@ -379,7 +379,7 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/arial"
                     android:gravity="center"
-                    android:text="1"
+                    android:text="@string/_1"
                     android:textSize="@dimen/lineSpacing" />
 
 
