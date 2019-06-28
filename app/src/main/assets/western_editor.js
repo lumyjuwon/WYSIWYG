@@ -1,10 +1,17 @@
 "use strict";
 
 var WE = {};
+var bkupScrollX, bkupScrollY;
+var selectionchangebykey = false;
 
 WE.editor = document.getElementById('editor');
 
 WE.selectionchange = function () {
+    /*
+    if(!selectionchangebykey) {
+        window.scrollTo(bkupScrollX, bkupScrollY);
+        selectionchangebykey=false;
+    }//*/
 	let items = {};
 
 	items.fontName = document.queryCommandValue('fontName');
@@ -30,10 +37,13 @@ WE.selectionchange = function () {
 
 /*
 document.addEventListener('selectstart', () => {
-  var x = window.scrollX, y =  window.scrollY;
-  window.scrollTo(x,y)
+  bkupScrollX = window.scrollX;
+  bkupScrollY = window.scrollY;
 });//*/
 document.addEventListener('selectionchange', WE.selectionchange);	// 커서 이동 시 이벤트
+document.addEventListener('keyDown', () => {
+  selectionchangebykey = true;
+});//*/
 
 WE.exec = function (cmd, val) { // execCommand로 동작하는 기능 처리
 	val = (typeof(val) !== 'undefined') ? val : null;
