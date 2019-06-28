@@ -18,6 +18,12 @@
     <dimen name="toolbarMargin">5dp</dimen>
 
 
+    <dimen name="webViewTopDownMargin">10dp</dimen>
+
+
+
+
+
     <dimen name="dividerPadding">23dp</dimen>
 
 

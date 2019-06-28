@@ -13,34 +13,28 @@
         android:paddingStart="@dimen/sideLinePadding"
         android:paddingEnd="@dimen/sideLinePadding"
         >
-        <HorizontalScrollView
-            android:layout_width="0dp"
+
+
+        <EditText
+            android:id="@+id/edt_headline"
+            android:inputType="textFilter"
+            android:hint="@string/stringHeadline"
+            android:background="@null"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
-            android:layout_marginEnd="@dimen/sideLinePadding"
-            >
-
-            <EditText
-                android:id="@+id/edt_headline"
-                android:inputType="textFilter"
-                android:hint="@string/stringHeadline"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="@font/arial"
-                android:textSize="@dimen/titleFontSize"
-                android:overScrollMode="always"
-                android:scrollbarStyle="insideInset"
-                android:scrollbars="none"
-                android:scrollHorizontally="true"
-                
-                />
+            android:scrollHorizontally="true"
+            android:fontFamily="@font/arial"
+            android:layout_margin="10dp"
+            android:textSize="@dimen/titleFontSize"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            />
 
 
 
-        </HorizontalScrollView>
+
 
 
         <com.example.wysiwyg.EditorButton
@@ -89,7 +83,9 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_marginStart="@dimen/sideLinePadding"
-        android:layout_marginEnd="@dimen/sideLinePadding">
+        android:layout_marginEnd="@dimen/sideLinePadding"
+        android:layout_marginTop="@dimen/webViewTopDownMargin"
+        android:layout_marginBottom="@dimen/webViewTopDownMargin">
     </WebView>
 
     <FrameLayout
