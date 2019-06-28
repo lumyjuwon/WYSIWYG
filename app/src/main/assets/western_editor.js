@@ -3,7 +3,6 @@
 var WE = {};
 
 WE.editor = document.getElementById('editor');
-WE.editor.focus(preventScroll:true);
 
 WE.selectionchange = function () {
 	let items = {};
