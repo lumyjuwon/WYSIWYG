@@ -30,7 +30,13 @@
                 android:background="@null"
                 android:layout_gravity="center_vertical"
                 android:fontFamily="@font/arial"
-                android:textSize="@dimen/titleFontSize"/>
+                android:textSize="@dimen/titleFontSize"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="none"
+                android:scrollHorizontally="true"
+                
+                />
 
 
 
@@ -81,7 +87,9 @@
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layout_marginStart="@dimen/sideLinePadding"
+        android:layout_marginEnd="@dimen/sideLinePadding">
     </WebView>
 
     <FrameLayout
