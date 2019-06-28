@@ -94,6 +94,16 @@ WE.lineHeight = function (height) {
 	WE.insertCss('line-height', height);
 };
 
+WE.insertYoutube = function (url) {
+	var html = '<iframe src="https://www.youtube.com/embed/' + url + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+	WE.exec('insertHTML', html);
+};
+
+WE.insertImage = function (url, alt) {
+	var html = '<img src="' + url + '" alt="' + alt + '">';
+	WE.exec('insertHTML', html);
+};
+
 WE.rgb2rgba = function (rgba) { // rgb를 rgba로 변환
 	if (rgba.substring(0, 4) == 'rgb(') {
 		rgba = rgba.replace('rgb', 'rgba').replace(')', ', 1)');
